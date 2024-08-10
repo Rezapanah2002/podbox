@@ -51,8 +51,17 @@ function Header() {
               سوالات متداول
             </Link>
           </li>
-          <li className="nav-bar">مشخصات فنی</li>
-          <li className="nav-bar">پادباکس</li>
+          <li href="#sectionTech" className="nav-bar">
+            مشخصات فنی
+          </li>
+          <li className="nav-bar">
+            <Link
+              className={`link ${pathname === "/" ? "text-gray-500" : ""}`}
+              href="/"
+            >
+              پادباکس
+            </Link>
+          </li>
         </ul>
         <div className="cursor-pointer hover:text-gray-400 duration-300 min-[1076px]:hidden">
           <svg
@@ -71,7 +80,12 @@ function Header() {
           </svg>
         </div>
         {/* logo */}
-        <img src="https://podbox.ir/_next/image?url=https%3A%2F%2Fpodspace.pod.ir%2Fapi%2Ffiles%2FJC4K6OQQP5XDSL3Z&w=1920&q=75" />
+        <Link
+          className={`link ${pathname === "/" ? "" : "text-gray-400"}`}
+          href="/"
+        >
+          <img src="https://podbox.ir/_next/image?url=https%3A%2F%2Fpodspace.pod.ir%2Fapi%2Ffiles%2FJC4K6OQQP5XDSL3Z&w=1920&q=75" />
+        </Link>
       </nav>
     </header>
   );
