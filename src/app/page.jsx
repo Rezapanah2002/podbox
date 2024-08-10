@@ -1,9 +1,9 @@
-import Image from "next/image";
+import Home from "./component/Home";
 
-export default function Home() {
+export default function Page() {
   return (
-    <div className="flex justify-center text-b-from p-10">
-      صفحه ی اصلی پاد باکس
+    <div>
+      <Home />
     </div>
   );
 }

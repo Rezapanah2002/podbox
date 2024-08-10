@@ -17,7 +17,9 @@ function Header() {
         <ul className="m-6 flex gap-10 max-[1076px]:hidden">
           <li className="nav-bar">
             <Link
-              className={`link ${pathname === "/blog" ? "text-slate-50" : ""}`}
+              className={`link ${
+                pathname === "/blog" ? "text-slate-50 font-semibold" : ""
+              }`}
               href="/blog"
             >
               وبلاگ
@@ -26,7 +28,7 @@ function Header() {
           <li className="nav-bar">
             <Link
               className={`link ${
-                pathname === "/contact" ? "text-slate-50" : ""
+                pathname === "/contact" ? "text-slate-50 font-semibold" : ""
               }`}
               href="/contact"
             >
@@ -36,7 +38,7 @@ function Header() {
           <li className="nav-bar">
             <Link
               className={`link ${
-                pathname === "/about-us" ? "text-slate-50" : ""
+                pathname === "/about-us" ? "text-slate-50 font-semibold" : ""
               }`}
               href="/about-us"
             >
@@ -45,7 +47,9 @@ function Header() {
           </li>
           <li className="nav-bar">
             <Link
-              className={`link ${pathname === "/faq" ? "text-slate-50" : ""}`}
+              className={`link ${
+                pathname === "/faq" ? "text-slate-50 font-semibold" : ""
+              }`}
               href="/faq"
             >
               سوالات متداول
@@ -54,7 +58,9 @@ function Header() {
           <li className="nav-bar">
             <Link
               className={`link ${
-                pathname === "/#sectionTech" ? "text-slate-50 " : ""
+                pathname === "/#sectionTech"
+                  ? "text-slate-50 font-semibold"
+                  : ""
               }`}
               href="/#sectionTech"
             >
@@ -63,7 +69,9 @@ function Header() {
           </li>
           <li className="nav-bar">
             <Link
-              className={`link ${pathname === "/" ? "text-slate-50" : ""}`}
+              className={`link ${
+                pathname === "/" ? "text-slate-50 font-semibold" : ""
+              }`}
               href="/"
             >
               پادباکس
