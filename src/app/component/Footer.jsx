@@ -1,9 +1,14 @@
+"use client";
+
 import React from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 function Footer() {
+  const pathname = usePathname;
   return (
     <div>
-      <footer className="flex items-center justify-end my-48 py-8 px-20 border-t-2 border-stone-900">
+      <footer className="flex items-center justify-end my-48 py-8 px-20 border-t-2 border-stone-900 text-gray-500 ">
         <div className="flex mx-5 gap-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -11,7 +16,7 @@ function Footer() {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="size-5 text-gray-500"
+            className="size-5"
           >
             <path
               strokeLinecap="round"
@@ -25,7 +30,7 @@ function Footer() {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="size-5 text-gray-500"
+            className="size-5"
           >
             <path
               strokeLinecap="round"
@@ -40,7 +45,7 @@ function Footer() {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="size-5 text-gray-500"
+            className="size-5"
           >
             <path
               strokeLinecap="round"
@@ -50,12 +55,38 @@ function Footer() {
           </svg>
         </div>
         <ul className="flex gap-4 justify-end max-[789px]:hidden">
-          <li className="footer-bar">قوانین و مقررات</li>
-          <li className="footer-bar">فرصت های شغلی</li>
-          <li className="footer-bar">همکاری با پادباکس</li>
+          <li className="footer-bar">
+            <Link
+              className={`link ${
+                pathname === "/terms-and-conditions" ? "text-white" : ""
+              }`}
+              href="/terms-and-conditions"
+            >
+              قوانین و مقررات
+            </Link>
+          </li>
+          <li className="footer-bar">
+            <Link
+              className={`link ${pathname === "/job" ? "text-gray-50" : ""}`}
+              href="/job"
+            >
+              فرصت های شغلی
+            </Link>
+          </li>
+          <li className="footer-bar">
+            <Link
+              className={`link ${
+                pathname === "/work-with-us" ? "bg-gray-50" : ""
+              }`}
+              href="/work-with-us"
+            >
+              همکاری با پادباکس
+            </Link>
+          </li>
           <li className="footer-bar">اپلیکیشن ها</li>
           <li className="footer-bar">مشاهده نسخه وب</li>
         </ul>
+
         <div className="flex items-center text-gray-500 cursor-pointer hover:text-white duration-300 min-[789px]:hidden">
           <svg
             xmlns="http://www.w3.org/2000/svg"
