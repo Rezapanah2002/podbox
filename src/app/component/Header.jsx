@@ -9,7 +9,7 @@ function Header() {
   return (
     <header className="border-b-2 border-stone-800 shadow-lg shadow-stone-900">
       {/* navbar */}
-      <nav className="flex items-center justify-between px-28 py-1 max-[1076px]:p-4">
+      <nav className="text-slate-300 flex items-center justify-between px-28 py-1 max-[1076px]:p-4">
         {/* button */}
         <button className="bg-gradient-to-r from-b-from via-b-via to-b-to rounded-xl py-2 px-5 hover:scale-110 hover:opacity-100 duration-500">
           خرید پادباکس
@@ -17,7 +17,7 @@ function Header() {
         <ul className="m-6 flex gap-10 max-[1076px]:hidden">
           <li className="nav-bar">
             <Link
-              className={`link ${pathname === "/blog" ? "text-gray-500" : ""}`}
+              className={`link ${pathname === "/blog" ? "text-slate-50" : ""}`}
               href="/blog"
             >
               وبلاگ
@@ -26,7 +26,7 @@ function Header() {
           <li className="nav-bar">
             <Link
               className={`link ${
-                pathname === "/contact" ? "text-gray-500" : ""
+                pathname === "/contact" ? "text-slate-50" : ""
               }`}
               href="/contact"
             >
@@ -36,7 +36,7 @@ function Header() {
           <li className="nav-bar">
             <Link
               className={`link ${
-                pathname === "/about-us" ? "text-gray-500" : ""
+                pathname === "/about-us" ? "text-slate-50" : ""
               }`}
               href="/about-us"
             >
@@ -45,18 +45,25 @@ function Header() {
           </li>
           <li className="nav-bar">
             <Link
-              className={`link ${pathname === "/faq" ? "text-gray-500" : ""}`}
+              className={`link ${pathname === "/faq" ? "text-slate-50" : ""}`}
               href="/faq"
             >
               سوالات متداول
             </Link>
           </li>
-          <li href="#sectionTech" className="nav-bar">
-            مشخصات فنی
+          <li className="nav-bar">
+            <Link
+              className={`link ${
+                pathname === "/#sectionTech" ? "text-slate-50 " : ""
+              }`}
+              href="/#sectionTech"
+            >
+              مشخصات فنی
+            </Link>
           </li>
           <li className="nav-bar">
             <Link
-              className={`link ${pathname === "/" ? "text-gray-500" : ""}`}
+              className={`link ${pathname === "/" ? "text-slate-50" : ""}`}
               href="/"
             >
               پادباکس
