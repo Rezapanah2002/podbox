@@ -1,6 +1,11 @@
+"use client";
+
 import React from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 function Header() {
+  const pathname = usePathname();
   return (
     <header className="border-b-2 border-stone-800 shadow-lg shadow-stone-900">
       {/* navbar */}
@@ -10,10 +15,42 @@ function Header() {
           خرید پادباکس
         </button>
         <ul className="m-6 flex gap-10 max-[1076px]:hidden">
-          <li className="nav-bar">وبلاگ</li>
-          <li className="nav-bar">تماس با ما</li>
-          <li className="nav-bar">درباره ما</li>
-          <li className="nav-bar">سوالات متداول</li>
+          <li className="nav-bar">
+            <Link
+              className={`link ${pathname === "/blog" ? "text-gray-500" : ""}`}
+              href="/blog"
+            >
+              وبلاگ
+            </Link>
+          </li>
+          <li className="nav-bar">
+            <Link
+              className={`link ${
+                pathname === "/contact" ? "text-gray-500" : ""
+              }`}
+              href="/contact"
+            >
+              تماس با ما
+            </Link>
+          </li>
+          <li className="nav-bar">
+            <Link
+              className={`link ${
+                pathname === "/about-us" ? "text-gray-500" : ""
+              }`}
+              href="/about-us"
+            >
+              درباره ما
+            </Link>
+          </li>
+          <li className="nav-bar">
+            <Link
+              className={`link ${pathname === "/faq" ? "text-gray-500" : ""}`}
+              href="/faq"
+            >
+              سوالات متداول
+            </Link>
+          </li>
           <li className="nav-bar">مشخصات فنی</li>
           <li className="nav-bar">پادباکس</li>
         </ul>
