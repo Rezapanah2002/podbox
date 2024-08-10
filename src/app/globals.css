@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -16,7 +17,15 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
+  line-height: 24px;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 500;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -24,10 +33,14 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  font-family: serif !important;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@layer components {
+  .nav-bar {
+    @apply cursor-pointer hover:text-gray-400 duration-300;
+  }
+  .footer-bar {
+    @apply text-gray-500 cursor-pointer hover:text-white duration-300;
   }
 }
