@@ -8,15 +8,18 @@ function Footer() {
   const pathname = usePathname();
   return (
     <div>
-      <footer className="flex items-center justify-end my-48 py-8 px-20 border-t-2 border-stone-900 text-gray-500 ">
+      <footer className="flex items-center justify-end py-8 px-20 border-t-2 border-stone-900 text-gray-500 ">
         <div className="flex mx-5 gap-3">
-          <a href="https://www.instagram.com/podbox.ir/">
+          <a href="https://www.instagram.com/podbox.ir/" target="_blank">
             <img src="https://podbox.ir/_next/image?url=https%3A%2F%2Fpodspace.pod.ir%2Fapi%2Ffiles%2FGCM7WEHO9GPH2YC6&w=1920&q=75" />
           </a>
-          <a href="https://www.linkedin.com/company/podbox/about/">
+          <a
+            href="https://www.linkedin.com/company/podbox/about/"
+            target="_blank"
+          >
             <img src="https://podbox.ir/_next/image?url=https%3A%2F%2Fpodspace.pod.ir%2Fapi%2Ffiles%2F6MWHT4AMLHPY4E84&w=1920&q=75" />
           </a>
-          <a href="https://www.aparat.com/Podbox.ir">
+          <a href="https://www.aparat.com/Podbox.ir" target="_blank">
             <img src="https://podbox.ir/_next/image?url=https%3A%2F%2Fpodspace.pod.ir%2Fapi%2Ffiles%2FLR7HQSYQSCDA6WSX&w=1920&q=75" />
           </a>
         </div>
@@ -53,7 +56,9 @@ function Footer() {
             اپلیکیشن ها
           </li>
           <li className="footer-bar">
-            <a href="https://app.podbox.ir/">مشاهده نسخه وب</a>
+            <a href="https://app.podbox.ir/" target="_blank">
+              مشاهده نسخه وب
+            </a>
           </li>
         </ul>
 
