@@ -52,8 +52,15 @@ function Footer() {
               همکاری با پادباکس
             </Link>
           </li>
-          <li className="footer-bar" href="#sectionApp">
-            اپلیکیشن ها
+          <li className="footer-bar">
+            <Link
+              className={`link ${
+                pathname === "/#sectionApp" ? "text-gray-50" : ""
+              }`}
+              href="/#sectionApp"
+            >
+              اپلیکیشن ها
+            </Link>
           </li>
           <li className="footer-bar">
             <a href="https://app.podbox.ir/" target="_blank">

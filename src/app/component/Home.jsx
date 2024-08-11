@@ -2,19 +2,24 @@ import React from "react";
 
 function Home() {
   return (
-    <div className="grid justify-items-center p-28 bg-custom-gradient h-screen w-full">
-      <h1 className="text-5xl text-wrap text-center w-2/3 mb-10">
-        پادباکس، دوستی برای سرگرمی و زندگی هوشمند
-      </h1>
-      <h3>
-        !شما که دنبال استریم سرگرمی و آوردن هوشمندی دیجیتال به خانه و زندگی‌تان
-        هستید، شما پادباکس را کم دارید
-      </h3>
-      <a href="https://app.podbox.ir/" target="_blank">
-        <button className="p-4 m-5 border-2 bg-w-b border-b-from rounded-xl">
-          ورود به وب اپلیکیشن پادباکس
-        </button>
-      </a>
+    <div>
+      <section className="flex justify-center p-28 bg-custom-gradient h-screen w-full">
+        <div className="grid justify-items-center whitespace-pre-wrap">
+          <h1 className="text-6xl text-center font-thin w-5/6 max-[745px]:mb-10 max-[745px]:text-2xl">
+            پادباکس، دوستی برای سرگرمی و زندگی هوشمند
+          </h1>
+          <h3 className="text-2xl text-wrap text-center w-1/2">
+            شما که دنبال استریم سرگرمی و آوردن هوشمندی دیجیتال به خانه و
+            زندگی‌تان هستید، شما پادباکس را کم دارید
+          </h3>
+          <a href="https://app.podbox.ir/" target="_blank">
+            <button className="p-4 border-2 bg-w-b border-b-from rounded-xl hover:scale-110 duration-500">
+              ورود به وب اپلیکیشن پادباکس
+            </button>
+          </a>
+        </div>
+      </section>
+      <section></section>
     </div>
   );
 }
