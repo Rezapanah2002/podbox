@@ -7,6 +7,14 @@ import { usePathname } from "next/navigation";
 function Footer() {
   const pathname = usePathname();
 
+  const links = [
+    { href: "/terms-and-conditions", text: "قوانین و مقررات" },
+    { href: "/job", text: "فرصت های شغلی" },
+    { href: "/work-with-us", text: "همکاری با پادباکس" },
+    { href: "/#sectionApp", text: "اپلیکیشن ها" },
+    { href: "https://app.podbox.ir/", text: "مشاهده نسخه وب", external: true },
+  ];
+
   const handleclick = () => {
     const fmenu = document.getElementById("fmenu");
     const arrow = document.getElementById("arrow");
@@ -14,7 +22,6 @@ function Footer() {
     arrow.addEventListener("click", () => {
       if (fmenu.classList.contains("max-[789px]:hidden")) {
         fmenu.classList.remove("max-[789px]:hidden");
-        fmenu.classList.add("justify-items-center", "mx-8");
       } else {
         fmenu.classList.add("max-[789px]:hidden");
       }
@@ -42,51 +49,25 @@ function Footer() {
           id="fmenu"
           className="min-[789px]:flex gap-4 justify-end max-[789px]:hidden"
         >
-          <li className="footer-bar">
-            <Link
-              className={`link ${
-                pathname === "/terms-and-conditions" ? "text-gray-50" : ""
-              }`}
-              href="/terms-and-conditions"
-            >
-              قوانین و مقررات
-            </Link>
-          </li>
-          <li className="footer-bar">
-            <Link
-              className={`link ${pathname === "/job" ? "text-gray-50" : ""}`}
-              href="/job"
-            >
-              فرصت های شغلی
-            </Link>
-          </li>
-          <li className="footer-bar">
-            <Link
-              className={`link ${
-                pathname === "/work-with-us" ? "text-gray-50" : ""
-              }`}
-              href="/work-with-us"
-            >
-              همکاری با پادباکس
-            </Link>
-          </li>
-          <li className="footer-bar">
-            <Link
-              className={`link ${
-                pathname === "/#sectionApp" ? "text-gray-50" : ""
-              }`}
-              href="/#sectionApp"
-            >
-              اپلیکیشن ها
-            </Link>
-          </li>
-          <li className="footer-bar">
-            <a href="https://app.podbox.ir/" target="_blank">
-              مشاهده نسخه وب
-            </a>
-          </li>
+          {links.map((link, index) => (
+            <li className="footer-bar" key={index}>
+              {link.external ? (
+                <a href={link.href} target="_blank" rel="noopener noreferrer">
+                  {link.text}
+                </a>
+              ) : (
+                <Link
+                  className={`link ${
+                    pathname === link.href ? "text-gray-50" : ""
+                  }`}
+                  href={link.href}
+                >
+                  {link.text}
+                </Link>
+              )}
+            </li>
+          ))}
         </ul>
-
         <div
           onClick={handleclick}
           id="arrow"

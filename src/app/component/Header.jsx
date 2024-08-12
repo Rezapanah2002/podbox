@@ -7,6 +7,15 @@ import { usePathname } from "next/navigation";
 function Header() {
   const pathname = usePathname();
 
+  const links = [
+    { href: "/blog", text: "وبلاگ" },
+    { href: "/contact", text: "تماس با ما" },
+    { href: "/about-us", text: "درباره ما" },
+    { href: "/faq", text: "سوالات متداول" },
+    { href: "/#sectionTech", text: "مشخصات فنی" },
+    { href: "/", text: "پادباکس" },
+  ];
+
   const handleclick = () => {
     const menu = document.getElementById("menu");
     const burger = document.getElementById("burger");
@@ -32,68 +41,18 @@ function Header() {
           className="m-6 min-[1076px]:flex gap-10 max-[1076px]:hidden"
           id="menu"
         >
-          <li className="nav-bar">
-            <Link
-              className={`link ${
-                pathname === "/blog" ? "text-slate-50 font-semibold" : ""
-              }`}
-              href="/blog"
-            >
-              وبلاگ
-            </Link>
-          </li>
-          <li className="nav-bar">
-            <Link
-              className={`link ${
-                pathname === "/contact" ? "text-slate-50 font-semibold" : ""
-              }`}
-              href="/contact"
-            >
-              تماس با ما
-            </Link>
-          </li>
-          <li className="nav-bar">
-            <Link
-              className={`link ${
-                pathname === "/about-us" ? "text-slate-50 font-semibold" : ""
-              }`}
-              href="/about-us"
-            >
-              درباره ما
-            </Link>
-          </li>
-          <li className="nav-bar">
-            <Link
-              className={`link ${
-                pathname === "/faq" ? "text-slate-50 font-semibold" : ""
-              }`}
-              href="/faq"
-            >
-              سوالات متداول
-            </Link>
-          </li>
-          <li className="nav-bar">
-            <Link
-              className={`link ${
-                pathname === "/#sectionTech"
-                  ? "text-slate-50 font-semibold"
-                  : ""
-              }`}
-              href="/#sectionTech"
-            >
-              مشخصات فنی
-            </Link>
-          </li>
-          <li className="nav-bar">
-            <Link
-              className={`link ${
-                pathname === "/" ? "text-slate-50 font-semibold" : ""
-              }`}
-              href="/"
-            >
-              پادباکس
-            </Link>
-          </li>
+          {links.map((link, index) => (
+            <li className="nav-bar" key={index}>
+              <Link
+                className={`link ${
+                  pathname === link.href ? "text-slate-50 font-semibold" : ""
+                }`}
+                href={link.href}
+              >
+                {link.text}
+              </Link>
+            </li>
+          ))}
         </ul>
         <div
           onClick={handleclick}
