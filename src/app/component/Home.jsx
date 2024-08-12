@@ -19,7 +19,6 @@ function Home() {
           </a>
         </div>
       </section>
-      <section></section>
     </div>
   );
 }
