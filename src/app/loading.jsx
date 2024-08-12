@@ -2,8 +2,8 @@ import React from "react";
 
 function Loading() {
   return (
-    <div className="flex justify-center text-b-from p-10  w-full h-screen">
-      <div className="w-28 h-28 border-8 text-blue-400 text-4xl animate-spin border-gray-300 flex items-center justify-center border-t-blue-400 rounded-full">
+    <div className="flex justify-center items-center w-full h-screen">
+      <div className="w-28 h-28 border-8 text-b-to text-4xl animate-spin border-slate-200 flex items-center justify-center border-t-b-from rounded-full">
         <svg
           viewBox="0 0 24 24"
           fill="currentColor"
