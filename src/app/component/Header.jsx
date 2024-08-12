@@ -14,7 +14,6 @@ function Header() {
     burger.addEventListener("click", () => {
       if (menu.classList.contains("max-[1076px]:hidden")) {
         menu.classList.remove("max-[1076px]:hidden");
-        menu.classList.add("justify-items-center", "mx-8");
       } else {
         menu.classList.add("max-[1076px]:hidden");
       }
