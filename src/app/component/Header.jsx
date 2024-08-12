@@ -14,6 +14,7 @@ function Header() {
     burger.addEventListener("click", () => {
       if (menu.classList.contains("max-[1076px]:hidden")) {
         menu.classList.remove("max-[1076px]:hidden");
+        menu.classList.add("justify-items-center", "mx-8");
       } else {
         menu.classList.add("max-[1076px]:hidden");
       }
@@ -28,7 +29,10 @@ function Header() {
         <button className="bg-gradient-to-r from-b-from via-b-via to-b-to rounded-xl py-2 px-5 hover:scale-110 hover:opacity-100 duration-500">
           خرید پادباکس
         </button>
-        <ul className="m-6 flex gap-10 max-[1076px]:hidden" id="menu">
+        <ul
+          className="m-6 min-[1076px]:flex gap-10 max-[1076px]:hidden"
+          id="menu"
+        >
           <li className="nav-bar">
             <Link
               className={`link ${

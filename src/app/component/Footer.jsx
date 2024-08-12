@@ -13,8 +13,8 @@ function Footer() {
 
     arrow.addEventListener("click", () => {
       if (fmenu.classList.contains("max-[789px]:hidden")) {
-        console.log(1);
         fmenu.classList.remove("max-[789px]:hidden");
+        fmenu.classList.add("justify-items-center", "mx-8");
       } else {
         fmenu.classList.add("max-[789px]:hidden");
       }
@@ -38,7 +38,10 @@ function Footer() {
             <img src="../../../aparat.png" alt="aparat" />
           </a>
         </div>
-        <ul id="fmenu" className="flex gap-4 justify-end max-[789px]:hidden">
+        <ul
+          id="fmenu"
+          className="min-[789px]:flex gap-4 justify-end max-[789px]:hidden"
+        >
           <li className="footer-bar">
             <Link
               className={`link ${
