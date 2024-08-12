@@ -1,11 +1,27 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 function Header() {
   const pathname = usePathname();
+
+  const handleclick = () => {
+    const menu = document.getElementById("menu");
+    const burger = document.getElementById("burger");
+
+    burger.addEventListener("click", () => {
+      if (menu.classList.contains("max-[1076px]:hidden")) {
+        menu.classList.remove("max-[1076px]:hidden");
+        menu.classList.add("grid");
+        menu.classList.add("justify-items-center");
+      } else {
+        menu.classList.add("max-[1076px]:hidden");
+      }
+    });
+  };
+
   return (
     <header className="border-b-2 border-stone-800 shadow-lg shadow-stone-900">
       {/* navbar */}
@@ -14,7 +30,7 @@ function Header() {
         <button className="bg-gradient-to-r from-b-from via-b-via to-b-to rounded-xl py-2 px-5 hover:scale-110 hover:opacity-100 duration-500">
           خرید پادباکس
         </button>
-        <ul className="m-6 flex gap-10 max-[1076px]:hidden">
+        <ul className="m-6 flex gap-10 max-[1076px]:hidden" id="menu">
           <li className="nav-bar">
             <Link
               className={`link ${
@@ -78,7 +94,11 @@ function Header() {
             </Link>
           </li>
         </ul>
-        <div className="cursor-pointer hover:text-gray-400 duration-300 min-[1076px]:hidden">
+        <div
+          onClick={handleclick}
+          id="burger"
+          className="cursor-pointer hover:text-gray-400 duration-300 min-[1076px]:hidden"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

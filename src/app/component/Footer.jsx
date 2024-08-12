@@ -6,6 +6,22 @@ import { usePathname } from "next/navigation";
 
 function Footer() {
   const pathname = usePathname();
+
+  const handleclick = () => {
+    const fmenu = document.getElementById("fmenu");
+    const arrow = document.getElementById("arrow");
+
+    arrow.addEventListener("click", () => {
+      if (fmenu.classList.contains("max-[789px]:hidden")) {
+        fmenu.classList.remove("max-[789px]:hidden");
+        fmenu.classList.add("grid");
+        fmenu.classList.add("justify-items-center");
+      } else {
+        fmenu.classList.add("max-[789px]:hidden");
+      }
+    });
+  };
+
   return (
     <div>
       <footer className="flex items-center justify-end py-8 px-20 border-t-2 border-stone-900 text-gray-500 ">
@@ -23,7 +39,7 @@ function Footer() {
             <img src="https://podbox.ir/_next/image?url=https%3A%2F%2Fpodspace.pod.ir%2Fapi%2Ffiles%2FLR7HQSYQSCDA6WSX&w=1920&q=75" />
           </a>
         </div>
-        <ul className="flex gap-4 justify-end max-[789px]:hidden">
+        <ul id="fmenu" className="flex gap-4 justify-end max-[789px]:hidden">
           <li className="footer-bar">
             <Link
               className={`link ${
@@ -69,7 +85,11 @@ function Footer() {
           </li>
         </ul>
 
-        <div className="flex items-center text-gray-500 cursor-pointer hover:text-white duration-300 min-[789px]:hidden">
+        <div
+          onClick={handleclick}
+          id="arrow"
+          className="flex items-center text-gray-500 cursor-pointer hover:text-white duration-300 min-[789px]:hidden"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
