@@ -14,8 +14,6 @@ function Header() {
     burger.addEventListener("click", () => {
       if (menu.classList.contains("max-[1076px]:hidden")) {
         menu.classList.remove("max-[1076px]:hidden");
-        menu.classList.add("grid");
-        menu.classList.add("justify-items-center");
       } else {
         menu.classList.add("max-[1076px]:hidden");
       }
@@ -119,7 +117,7 @@ function Header() {
           className={`link ${pathname === "/" ? "" : "text-gray-400"}`}
           href="/"
         >
-          <img src="https://podbox.ir/_next/image?url=https%3A%2F%2Fpodspace.pod.ir%2Fapi%2Ffiles%2FJC4K6OQQP5XDSL3Z&w=1920&q=75" />
+          <img src="../../../podbox.png" />
         </Link>
       </nav>
     </header>

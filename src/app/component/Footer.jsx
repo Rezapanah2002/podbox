@@ -13,9 +13,8 @@ function Footer() {
 
     arrow.addEventListener("click", () => {
       if (fmenu.classList.contains("max-[789px]:hidden")) {
+        console.log(1);
         fmenu.classList.remove("max-[789px]:hidden");
-        fmenu.classList.add("grid");
-        fmenu.classList.add("justify-items-center");
       } else {
         fmenu.classList.add("max-[789px]:hidden");
       }
@@ -27,16 +26,16 @@ function Footer() {
       <footer className="flex items-center justify-end py-8 px-20 border-t-2 border-stone-900 text-gray-500 ">
         <div className="flex mx-5 gap-3">
           <a href="https://www.instagram.com/podbox.ir/" target="_blank">
-            <img src="https://podbox.ir/_next/image?url=https%3A%2F%2Fpodspace.pod.ir%2Fapi%2Ffiles%2FGCM7WEHO9GPH2YC6&w=1920&q=75" />
+            <img src="../../../insta.png" alt="instagram" />
           </a>
           <a
             href="https://www.linkedin.com/company/podbox/about/"
             target="_blank"
           >
-            <img src="https://podbox.ir/_next/image?url=https%3A%2F%2Fpodspace.pod.ir%2Fapi%2Ffiles%2F6MWHT4AMLHPY4E84&w=1920&q=75" />
+            <img src="../../../linkedin.png" alt="linkesin" />
           </a>
           <a href="https://www.aparat.com/Podbox.ir" target="_blank">
-            <img src="https://podbox.ir/_next/image?url=https%3A%2F%2Fpodspace.pod.ir%2Fapi%2Ffiles%2FLR7HQSYQSCDA6WSX&w=1920&q=75" />
+            <img src="../../../aparat.png" alt="aparat" />
           </a>
         </div>
         <ul id="fmenu" className="flex gap-4 justify-end max-[789px]:hidden">
