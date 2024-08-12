@@ -39,7 +39,7 @@ function Footer() {
             href="https://www.linkedin.com/company/podbox/about/"
             target="_blank"
           >
-            <img src="../../../linkedin.png" alt="linkesin" />
+            <img src="../../../linkedin.png" alt="linkedin" />
           </a>
           <a href="https://www.aparat.com/Podbox.ir" target="_blank">
             <img src="../../../aparat.png" alt="aparat" />

@@ -1,6 +1,7 @@
 import Home from "@/app/component/home";
+import "./globals.css";
 
-export default function Page() {
+export default function home() {
   return (
     <div>
       <Home />
