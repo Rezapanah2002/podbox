@@ -15,6 +15,27 @@ function Footer() {
     { href: "https://app.podbox.ir/", text: "مشاهده نسخه وب", external: true },
   ];
 
+  const socials = [
+    {
+      src: "../../../insta.png",
+      alt: "instagram",
+      href: "https://www.instagram.com/podbox.ir/",
+      target: "_blank",
+    },
+    {
+      src: "../../../linkedin.png",
+      alt: "linkedin",
+      href: "https://www.linkedin.com/company/podbox/about/",
+      target: "_blank",
+    },
+    {
+      src: "../../../aparat.png",
+      alt: "aparat",
+      href: "https://www.aparat.com/Podbox.ir",
+      target: "_blank",
+    },
+  ];
+
   const handleclick = () => {
     const fmenu = document.getElementById("fmenu");
     const arrow = document.getElementById("arrow");
