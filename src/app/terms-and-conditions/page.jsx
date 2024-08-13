@@ -1,5 +1,5 @@
 import React from "react";
-import Terms from "@/views/terms-and-conditions/page";
+import Terms from "@/views/terms-and-conditions/Terms";
 
 export const metadata = {
   title: "قوانین و مقررات پادباکس",

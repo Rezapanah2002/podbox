@@ -1,5 +1,5 @@
 import React from "react";
-import Workwith from "@/views/work-with-us/page";
+import Workwith from "@/views/work-with-us/Workwith";
 
 export const metadata = {
   title: "صفحه همکاری با پادباکس",

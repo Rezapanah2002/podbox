@@ -1,5 +1,5 @@
 import React from "react";
-import Blog from "@/views/blog/page";
+import Blog from "@/views/blog/Blog";
 
 export const metadata = {
   title: "بلاگ",

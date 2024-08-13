@@ -1,5 +1,5 @@
 import React from "react";
-import Contact from "@/views/contact/page";
+import Contact from "@/views/contact/Contact";
 
 export const metadata = {
   title: "صفحه تماس با ما",

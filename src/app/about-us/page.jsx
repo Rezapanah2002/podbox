@@ -1,4 +1,4 @@
-import Aboutus from "@/views/about-us/page";
+import Aboutus from "@/views/about-us/Aboutus";
 import React from "react";
 
 export const metadata = {

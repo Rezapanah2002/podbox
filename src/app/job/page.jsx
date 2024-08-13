@@ -1,5 +1,5 @@
 import React from "react";
-import Job from "@/views/job/page";
+import Job from "@/views/job/Job";
 
 export const metadata = {
   title: "صفحه فرصت های شغلی",

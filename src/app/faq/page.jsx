@@ -1,5 +1,5 @@
+import Faq from "@/views/faq/Faq";
 import React from "react";
-import Faq from "@/views/faq/page";
 
 export const metadata = {
   title: "صفحه سوالات متداول",
@@ -7,7 +7,11 @@ export const metadata = {
 };
 
 function faq() {
-  return <Faq />;
+  return (
+    <div>
+      <Faq />
+    </div>
+  );
 }
 
 export default faq;

@@ -1,5 +1,5 @@
-import Home from "@/app/component/home";
-import "./globals.css";
+import Home from "@/components/Home/Home";
+import "../assets/css/globals.css";
 
 export const metadata = {
   title: "پادباکس",
