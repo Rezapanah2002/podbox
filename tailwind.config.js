@@ -19,6 +19,7 @@ module.exports = {
       'b-from': '#FF630C ',
       'b-via': '#FF511E',
       'b-to': '#FE2C43',
+      'c-bg' : '#131212',
       },
     },
   },
