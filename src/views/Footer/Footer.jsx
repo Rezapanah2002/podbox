@@ -1,11 +1,13 @@
 "use client";
 
 import React from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 function Footer() {
   const pathname = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const links = [
     { href: "/terms-and-conditions", text: "قوانین و مقررات" },
@@ -36,17 +38,8 @@ function Footer() {
     },
   ];
 
-  const handleclick = () => {
-    const fmenu = document.getElementById("fmenu");
-    const arrow = document.getElementById("arrow");
-
-    arrow.addEventListener("click", () => {
-      if (fmenu.classList.contains("max-[789px]:hidden")) {
-        fmenu.classList.remove("max-[789px]:hidden");
-      } else {
-        fmenu.classList.add("max-[789px]:hidden");
-      }
-    });
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
@@ -67,8 +60,12 @@ function Footer() {
           </a>
         </div>
         <ul
+          className={`m-6 gap-10 ${
+            isMenuOpen
+              ? "fixed bottom-10 mx-0 left-0 w-full h-full bg-black flex flex-col items-center justify-center"
+              : "gap-4 flex justify-end max-[789px]:hidden"
+          }`}
           id="fmenu"
-          className="min-[789px]:flex gap-4 justify-end max-[789px]:hidden"
         >
           {links.map((link, index) => (
             <li className="footer-bar" key={index}>
@@ -90,7 +87,7 @@ function Footer() {
           ))}
         </ul>
         <div
-          onClick={handleclick}
+          onClick={toggleMenu}
           id="arrow"
           className="flex items-center text-gray-500 cursor-pointer hover:text-white duration-300 min-[789px]:hidden"
         >

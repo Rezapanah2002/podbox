@@ -2,9 +2,11 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 function Header() {
   const pathname = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const links = [
     { href: "/blog", text: "وبلاگ" },
@@ -15,17 +17,8 @@ function Header() {
     { href: "/", text: "پادباکس" },
   ];
 
-  const handleclick = () => {
-    const menu = document.getElementById("menu");
-    const burger = document.getElementById("burger");
-
-    burger.addEventListener("click", () => {
-      if (menu.classList.contains("max-[1076px]:hidden")) {
-        menu.classList.remove("max-[1076px]:hidden");
-      } else {
-        menu.classList.add("max-[1076px]:hidden");
-      }
-    });
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
@@ -37,16 +30,21 @@ function Header() {
           خرید پادباکس
         </button>
         <ul
-          className="m-6 min-[1076px]:flex gap-10 max-[1076px]:hidden"
+          className={`m-6 gap-10 ${
+            isMenuOpen
+              ? "fixed top-9 mx-0 left-0 w-full h-full bg-black flex flex-col items-center justify-center"
+              : "flex justify-between max-[1076px]:hidden"
+          }`}
           id="menu"
         >
           {links.map((link, index) => (
-            <li className="nav-bar" key={index}>
+            <li className="nav-bar my-4" key={index}>
               <Link
                 className={`link ${
                   pathname === link.href ? "text-slate-50 font-semibold" : ""
                 }`}
                 href={link.href}
+                onClick={() => setIsMenuOpen(false)}
               >
                 {link.text}
               </Link>
@@ -54,7 +52,7 @@ function Header() {
           ))}
         </ul>
         <div
-          onClick={handleclick}
+          onClick={toggleMenu}
           id="burger"
           className="cursor-pointer hover:text-gray-400 duration-300 min-[1076px]:hidden"
         >
@@ -78,7 +76,7 @@ function Header() {
           className={`link ${pathname === "/" ? "" : "text-gray-400"}`}
           href="/"
         >
-          <img src="../../../podbox.png" />
+          <img src="../../../podbox.png" alt="پادباکس" />
         </Link>
       </nav>
     </header>
