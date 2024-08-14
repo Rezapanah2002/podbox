@@ -1,13 +1,14 @@
 "use client";
 
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { usePropWindow } from "../../hooks/usePropWindow";
 
 function Footer() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { width } = usePropWindow();
 
   const links = [
     { href: "/terms-and-conditions", text: "قوانین و مقررات" },
@@ -46,24 +47,19 @@ function Footer() {
     <div>
       <footer className="flex items-center justify-end py-8 px-20 border-t-2 border-stone-900 text-gray-500 ">
         <div className="flex mx-5 gap-3">
-          <a href="https://www.instagram.com/podbox.ir/" target="_blank">
-            <img src="../../../insta.png" alt="instagram" />
-          </a>
-          <a
-            href="https://www.linkedin.com/company/podbox/about/"
-            target="_blank"
-          >
-            <img src="../../../linkedin.png" alt="linkedin" />
-          </a>
-          <a href="https://www.aparat.com/Podbox.ir" target="_blank">
-            <img src="../../../aparat.png" alt="aparat" />
-          </a>
+          {socials.map((social, index) => (
+            <a key={index} href={social.href} target={social.target}>
+              <img src={social.src} alt={social.alt} />
+            </a>
+          ))}
         </div>
         <ul
           className={`m-6 gap-10 ${
+            isMenuOpen || width > 789 ? "flex justify-end" : "hidden"
+          } ${
             isMenuOpen
-              ? "fixed bottom-10 mx-0 left-0 w-full h-full bg-black flex flex-col items-center justify-center"
-              : "gap-4 flex justify-end max-[789px]:hidden"
+              ? "fixed flex-col items-center justify-center bottom-10 mx-0 left-0 w-full h-full bg-black"
+              : "gap-4 flex justify-end"
           }`}
           id="fmenu"
         >
@@ -89,7 +85,9 @@ function Footer() {
         <div
           onClick={toggleMenu}
           id="arrow"
-          className="flex items-center text-gray-500 cursor-pointer hover:text-white duration-300 min-[789px]:hidden"
+          className={`flex items-center text-gray-500 cursor-pointer hover:text-white duration-300 ${
+            width <= 789 ? "block" : "hidden"
+          }`}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

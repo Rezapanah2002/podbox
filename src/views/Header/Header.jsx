@@ -3,10 +3,12 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { usePropWindow } from "../../hooks/usePropWindow";
 
 function Header() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { width } = usePropWindow();
 
   const links = [
     { href: "/blog", text: "وبلاگ" },
@@ -24,16 +26,18 @@ function Header() {
   return (
     <header className="border-b-2 border-stone-800 shadow-lg shadow-stone-900">
       {/* navbar */}
-      <nav className="text-slate-300 flex items-center justify-between px-28 py-2 max-[1076px]:px-10">
+      <nav className="text-slate-300 flex items-center justify-between px-28 py-2">
         {/* button */}
         <button className="bg-gradient-to-r from-b-from via-b-via to-b-to rounded-xl py-2 px-5 hover:scale-110 hover:opacity-100 duration-500">
           خرید پادباکس
         </button>
         <ul
-          className={`m-6 gap-10 ${
+          className={`m-3 gap-10 ${
+            isMenuOpen || width > 1076 ? "flex justify-evenly" : "hidden"
+          } ${
             isMenuOpen
-              ? "fixed top-9 mx-0 left-0 w-full h-full bg-black flex flex-col items-center justify-center"
-              : "flex justify-between max-[1076px]:hidden"
+              ? "fixed flex-col items-end p-10 justify-evenly top-9 mx-0 left-0 w-full h-full bg-black"
+              : ""
           }`}
           id="menu"
         >
@@ -54,7 +58,9 @@ function Header() {
         <div
           onClick={toggleMenu}
           id="burger"
-          className="cursor-pointer hover:text-gray-400 duration-300 min-[1076px]:hidden"
+          className={`cursor-pointer hover:text-gray-400 duration-300 ${
+            width <= 1076 ? "block" : "hidden"
+          }`}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +68,7 @@ function Header() {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="size-5 "
+            className="size-5"
           >
             <path
               strokeLinecap="round"
