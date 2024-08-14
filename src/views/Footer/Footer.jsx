@@ -55,11 +55,11 @@ function Footer() {
         </div>
         <ul
           className={`m-6 gap-10 ${
-            isMenuOpen || width > 789 ? "flex justify-end" : "hidden"
+            isMenuOpen || width > 853 ? "gap-8 flex justify-end" : "hidden"
           } ${
             isMenuOpen
               ? "fixed flex-col items-center justify-center bottom-10 mx-0 left-0 w-full h-full bg-black"
-              : "gap-4 flex justify-end"
+              : ""
           }`}
           id="fmenu"
         >
@@ -75,6 +75,7 @@ function Footer() {
                     pathname === link.href ? "text-gray-50" : ""
                   }`}
                   href={link.href}
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   {link.text}
                 </Link>
@@ -86,7 +87,7 @@ function Footer() {
           onClick={toggleMenu}
           id="arrow"
           className={`flex items-center text-gray-500 cursor-pointer hover:text-white duration-300 ${
-            width <= 789 ? "block" : "hidden"
+            width <= 853 ? "block" : "hidden"
           }`}
         >
           <svg

@@ -33,7 +33,9 @@ function Header() {
         </button>
         <ul
           className={`m-3 gap-10 ${
-            isMenuOpen || width > 1076 ? "flex justify-evenly" : "hidden"
+            isMenuOpen || width > 1076
+              ? "flex justify-evenly gap-12 p-3"
+              : "hidden"
           } ${
             isMenuOpen
               ? "fixed flex-col items-end p-10 justify-evenly top-9 mx-0 left-0 w-full h-full bg-black"
@@ -42,7 +44,7 @@ function Header() {
           id="menu"
         >
           {links.map((link, index) => (
-            <li className="nav-bar my-4" key={index}>
+            <li className="nav-bar" key={index}>
               <Link
                 className={`link ${
                   pathname === link.href ? "text-slate-50 font-semibold" : ""
