@@ -23,8 +23,8 @@ function Home() {
         </div>
         {/* animation */}
         <div className="w-full h-full flex justify-center">
-          <motion.div className="w-4/5 h-96 bg-gradient-to-r from-b-from via-b-via to-b-to rounded-2xl">
-            {/* <img src="../../../anim-bg.png" /> */}
+          <motion.div className="flex justify-center items-center w-4/5 h-96 bg-gradient-to-r from-b-from via-b-via to-b-to rounded-2xl">
+            <img className="w-5/6 h-5/6" src="../../../anim-bg.png" />
           </motion.div>
         </div>
       </section>
