@@ -5,10 +5,10 @@ function Home() {
     <div>
       <section className="flex justify-center p-28 bg-custom-gradient h-screen w-full">
         <div className="grid justify-items-center whitespace-pre-wrap">
-          <h1 className="text-6xl text-center font-thin w-5/6 max-[745px]:mb-10 max-[745px]:text-2xl">
+          <h1 className="text-6xl text-center font-thin w-5/6 max-[745px]:text-2xl max-[745px]:w-full">
             پادباکس، دوستی برای سرگرمی و زندگی هوشمند
           </h1>
-          <h3 className="text-2xl text-wrap text-center w-1/2">
+          <h3 className="text-2xl text-wrap text-center w-1/2 max-[745px]:text-base max-[745px]:w-full">
             شما که دنبال استریم سرگرمی و آوردن هوشمندی دیجیتال به خانه و
             زندگی‌تان هستید، شما پادباکس را کم دارید
           </h3>

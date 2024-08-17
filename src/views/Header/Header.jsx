@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { usePropWindow } from "../../hooks/usePropWindow";
 
 function Header() {
@@ -23,22 +23,28 @@ function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  useEffect(() => {
+    if (width > 1076 && isMenuOpen) {
+      setIsMenuOpen(false);
+    }
+  }, [width, isMenuOpen]);
+
   return (
     <header className="border-b-2 border-stone-800 shadow-lg shadow-stone-900">
       {/* navbar */}
-      <nav className="text-slate-300 flex items-center justify-between px-28 py-2">
+      <nav className="text-slate-300 flex items-center flex-row  justify-between w-full px-12 py-2 sticky">
         {/* button */}
         <button className="bg-gradient-to-r from-b-from via-b-via to-b-to rounded-xl py-2 px-5 hover:scale-110 hover:opacity-100 duration-500">
           خرید پادباکس
         </button>
         <ul
-          className={`m-3 gap-10 ${
+          className={` ${
             isMenuOpen || width > 1076
-              ? "flex justify-evenly gap-12 p-3"
+              ? "m-3 flex justify-evenly gap-12 p-3"
               : "hidden"
           } ${
             isMenuOpen
-              ? "fixed flex-col items-end p-10 justify-evenly top-9 mx-0 left-0 w-full h-full bg-black"
+              ? "fixed flex-col items-end py-20 pr-20 top-9 mx-0 left-0 w-full h-full bg-black"
               : ""
           }`}
           id="menu"

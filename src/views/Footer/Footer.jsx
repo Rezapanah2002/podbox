@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { usePropWindow } from "../../hooks/usePropWindow";
@@ -43,6 +43,12 @@ function Footer() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  useEffect(() => {
+    if (width > 853 && isMenuOpen) {
+      setIsMenuOpen(false);
+    }
+  }, [width, isMenuOpen]);
+
   return (
     <div>
       <footer className="flex items-center justify-end py-8 px-20 border-t-2 border-stone-900 text-gray-500 ">
@@ -58,7 +64,7 @@ function Footer() {
             isMenuOpen || width > 853 ? "gap-8 flex justify-end" : "hidden"
           } ${
             isMenuOpen
-              ? "fixed flex-col items-center justify-center bottom-10 mx-0 left-0 w-full h-full bg-black"
+              ? "fixed flex-col items-center p-10 justify-between mx-0 bottom-10 left-0 w-full h-full bg-black"
               : ""
           }`}
           id="fmenu"
