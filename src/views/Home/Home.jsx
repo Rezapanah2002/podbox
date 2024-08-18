@@ -186,6 +186,23 @@ function Home() {
             </motion.div>
           </motion.div>
         </div>
+        <div class="flex justify-evenly w-full h-screen">
+          <div class="w-1/5 h-1/2 bg-gradient-to-r from-stone-900 to-stone-800 rounded-3xl opacity-70 hover:opacity-100">
+            <h1 className="text-xl m-10 bg-gradient-to-l from-b-to via-b-via to-b-from bg-clip-text inline-block text-transparent">
+              معرفی پادباکس پلاس
+            </h1>
+          </div>
+          <div class="w-1/5 h-1/2 bg-gradient-to-r from-stone-900 to-stone-800 rounded-3xl opacity-70 hover:opacity-100">
+            <h1 className="text-xl m-10 bg-gradient-to-l from-green-800 via-green-500 to-green-300 bg-clip-text inline-block text-transparent">
+              لانچر پادباکس
+            </h1>
+          </div>
+          <div class="w-1/5 h-1/2 bg-gradient-to-r from-stone-900 to-stone-800 rounded-3xl opacity-70 hover:opacity-100">
+            <h1 className="text-xl m-10 bg-gradient-to-l from-indigo-800 via-indigo-600 to-indigo-400 bg-clip-text inline-block text-transparent">
+              اندروید باکس پادباکس
+            </h1>
+          </div>
+        </div>
       </section>
     </div>
   );
