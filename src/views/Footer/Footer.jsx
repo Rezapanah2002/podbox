@@ -65,7 +65,7 @@ function Footer() {
           } ${
             isMenuOpen
               ? "fixed flex-col items-center p-10 justify-between mx-0 bottom-10 left-0 w-full h-full bg-black"
-              : ""
+              : "gap-4 flex justify-end"
           }`}
           id="fmenu"
         >
