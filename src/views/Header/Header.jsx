@@ -30,9 +30,9 @@ function Header() {
   }, [width, isMenuOpen]);
 
   return (
-    <header className="border-b-2 border-stone-800 shadow-lg shadow-stone-900">
+    <header className="bg-black border-b-2 border-stone-800 shadow-lg shadow-stone-900 sticky">
       {/* navbar */}
-      <nav className="text-slate-300 flex items-center flex-row  justify-between w-full px-12 py-2 sticky">
+      <nav className="text-slate-300 flex items-center flex-row  justify-between w-full px-12 py-2">
         {/* button */}
         <button className="bg-gradient-to-r from-b-from via-b-via to-b-to rounded-xl py-2 px-5 hover:scale-110 hover:opacity-100 duration-500">
           خرید پادباکس
@@ -45,7 +45,7 @@ function Header() {
           } ${
             isMenuOpen
               ? "fixed flex-col items-end py-20 pr-20 top-9 mx-0 left-0 w-full h-full bg-black"
-              : ""
+              : "flex justify-evenly gap-12"
           }`}
           id="menu"
         >

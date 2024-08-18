@@ -1,9 +1,10 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 
 function Home() {
+  const { scrollYProgress: copmletionProgress } = useScroll();
   return (
     <div>
       <section className="flex flex-col items-center justify-evenly p-32 bg-custom-gradient gap-32 h-full w-full">
@@ -22,9 +23,15 @@ function Home() {
           </a>
         </div>
         {/* animation */}
-        <div className="w-full h-full flex justify-center">
-          <motion.div className="flex justify-center items-center w-4/5 h-96 bg-gradient-to-r from-b-from via-b-via to-b-to rounded-2xl">
-            <img className="w-5/6 h-5/6" src="../../../anim-bg.png" />
+        <div className="w-full h-full flex justify-center max-[1210px]:hidden">
+          <motion.div className="flex justify-center items-end w-4/5 h-96 bg-gradient-to-r from-b-from via-b-via to-b-to rounded-2xl">
+            <motion.img
+              className="w-5/6 h-5/6 origin-bottom"
+              src="../../../anim-bg.png"
+              animate={{
+                y: -50,
+              }}
+            />
           </motion.div>
         </div>
       </section>
