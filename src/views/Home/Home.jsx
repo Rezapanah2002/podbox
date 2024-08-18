@@ -1,11 +1,12 @@
 "use client";
 
 import React from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 
 function Home() {
   const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 500], [150, 0]);
+  const y = useTransform(scrollY, [0, 600], [100, -100]);
+  const smoothY = useSpring(y, { stiffness: 600, damping: 200 });
 
   return (
     <div>
@@ -34,7 +35,7 @@ function Home() {
 
             {/* voice */}
             <motion.div
-              className="bg-gray-300 bg-opacity-20 rounded-3xl w-1/3 h-28 absolute -top-20 -left-28 flex justify-evenly items-center cursor-grab"
+              className="bg-gray-500 bg-opacity-20 rounded-3xl w-1/3 h-28 absolute -top-28 -left-28 flex justify-evenly items-center cursor-grab"
               drag
               dragConstraints={{
                 top: 0,
@@ -46,7 +47,7 @@ function Home() {
                 bounceStiffness: 600,
                 bounceDamping: 10,
               }}
-              style={{ y }}
+              style={{ y: smoothY }}
               whileHover={{
                 scale: 1.2,
               }}
@@ -64,7 +65,7 @@ function Home() {
               target="_blank"
             >
               <motion.div
-                className="bg-gray-300 bg-opacity-20 rounded-3xl w-56 h-72 absolute -top-44 -right-28 flex justify-center items-center cursor-grab"
+                className="bg-gray-500 bg-opacity-20 rounded-3xl w-56 h-72 absolute -top-44 -right-28 flex justify-center items-center cursor-grab"
                 drag
                 dragConstraints={{
                   top: 0,
@@ -77,7 +78,7 @@ function Home() {
                   bounceDamping: 10,
                 }}
                 style={{
-                  y,
+                  y: smoothY,
                 }}
                 whileHover={{
                   scale: 1.2,
@@ -99,7 +100,7 @@ function Home() {
               target="_blank"
             >
               <motion.div
-                className="bg-gray-300 bg-opacity-20 rounded-3xl w-44 h-56 absolute bottom-16 -left-20 flex justify-center items-center cursor-grab"
+                className="bg-gray-500 bg-opacity-20 rounded-3xl w-44 h-56 absolute bottom-16 -left-20 flex justify-center items-center cursor-grab"
                 drag
                 dragConstraints={{
                   top: 0,
@@ -111,7 +112,9 @@ function Home() {
                   bounceStiffness: 600,
                   bounceDamping: 10,
                 }}
-                style={{ y }}
+                style={{
+                  y: smoothY,
+                }}
                 whileHover={{
                   scale: 1.2,
                 }}
@@ -128,7 +131,7 @@ function Home() {
 
             {/* music */}
             <motion.div
-              className="bg-gray-300 bg-opacity-20 rounded-3xl w-40 h-40 absolute bottom-52 flex justify-center items-center  cursor-grab"
+              className="bg-gray-500 bg-opacity-20 rounded-3xl w-40 h-40 absolute bottom-52 flex justify-center items-center  cursor-grab"
               drag
               dragConstraints={{
                 top: 0,
@@ -140,7 +143,7 @@ function Home() {
                 bounceStiffness: 600,
                 bounceDamping: 10,
               }}
-              style={{ y }}
+              style={{ y: smoothY }}
               whileHover={{
                 scale: 1.2,
               }}
@@ -156,7 +159,7 @@ function Home() {
 
             {/* gaming */}
             <motion.div
-              className="bg-gray-300 bg-opacity-20 rounded-3xl w-24 h-24 absolute bottom-28 -right-10 flex justify-center items-center cursor-grab"
+              className="bg-gray-500 bg-opacity-20 rounded-3xl w-24 h-24 absolute bottom-28 -right-10 flex justify-center items-center cursor-grab"
               drag
               dragConstraints={{
                 top: 0,
@@ -168,7 +171,7 @@ function Home() {
                 bounceStiffness: 600,
                 bounceDamping: 10,
               }}
-              style={{ y }}
+              style={{ y: smoothY }}
               whileHover={{
                 scale: 1.2,
               }}
