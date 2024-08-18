@@ -32,7 +32,7 @@ function Header() {
   return (
     <header className="bg-black border-b-2 border-stone-800 shadow-lg shadow-stone-900 sticky">
       {/* navbar */}
-      <nav className="text-slate-300 flex items-center flex-row  justify-between w-full px-12 py-2">
+      <nav className="text-slate-300 flex items-center flex-row justify-between text-xl w-full px-12 py-2">
         {/* button */}
         <button className="bg-gradient-to-r from-b-from via-b-via to-b-to rounded-xl py-2 px-5 hover:scale-110 hover:opacity-100 duration-500">
           خرید پادباکس
