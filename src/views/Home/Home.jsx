@@ -13,7 +13,7 @@ function Home() {
     <div>
       <section className="bg-custom-gradient h-full w-full">
         <div className="flex flex-col items-center whitespace-pre-wrap pt-56 px-10">
-          <h1 className="text-6xl text-center font-thin w-full mb-10 max-[745px]:text-2xl">
+          <h1 className="pt-12 px-40 text-8xl text-center font-thin w-full mb-10 max-[745px]:text-2xl">
             پادباکس، دوستی برای سرگرمی و زندگی هوشمند
           </h1>
           <h3 className="text-2xl text-wrap text-center w-4/5 max-[745px]:text-lg">
@@ -21,7 +21,7 @@ function Home() {
             زندگی‌تان هستید، شما پادباکس را کم دارید
           </h3>
           <a href="https://app.podbox.ir/" target="_blank" className="mt-10">
-            <button className="font-thin text-xl flex justify-center items-center w-64 h-16 border-2 bg-w-b border-b-from rounded-xl hover:scale-110 duration-500">
+            <button className="font-thin text-2xl flex justify-center items-center py-6 px-10 border-2 bg-w-b border-b-from rounded-xl hover:scale-110 duration-500">
               ورود به وب اپلیکیشن پادباکس
             </button>
           </a>
@@ -29,7 +29,7 @@ function Home() {
         {/* Section-1 */}
         <div className="relative mt-[100px]">
           {/* animation */}
-          <div className="w-full h-[90vh] flex justify-center mb-0 max-[1210px]:hidden">
+          <div className="w-full h-[90vh] flex justify-center max-[1210px]:hidden">
             <motion.div className="flex justify-center w-2/3 h-4/5 bg-gradient-to-r from-b-from via-b-via to-b-to rounded-3xl relative">
               <motion.img
                 className="px-16 pt-20 w-full h-full absolute bottom-0"
@@ -288,7 +288,7 @@ function Home() {
         </div>
 
         {/* Section-2 */}
-        <div className="p-16 w-full min-h-screen flex flex-col items-center bg-gradient-to-r from-black via-stone-900 to-black text-center">
+        <div className="p-16 w-full min-h-screen flex flex-col items-center bg-gradient-to-r from-stone-950 via-indigo-950 to-stone-950 text-center">
           <h1 className="text-2xl font-medium bg-gradient-to-l from-indigo-600 to-indigo-400 bg-clip-text inline-block text-transparent">
             اندروید باکس پادباکس
           </h1>
@@ -339,8 +339,20 @@ function Home() {
           </div>
         </div>
         {/* Section-3 */}
-        <div className="flex flex-col justify-center items-center p-10">
-          <h1>مشخصات فنی سخت افزار پادباکس</h1>
+        <div className="w-full flex flex-col justify-center items-center p-20">
+          <h1 className="text-2xl">مشخصات فنی سخت افزار پادباکس</h1>
+          <div className="w-3/5 mx-auto mt-10">
+            <div className="grid grid-cols-4 grid-rows-2 gap-10">
+              <div className="h-72 bg-orange-500 rounded-3xl"></div>
+              <div className="h-72 bg-green-500 rounded-3xl"></div>
+              <div className="h-72 bg-red-500 rounded-3xl"></div>
+              <div className="h-72 bg-teal-500 rounded-3xl"></div>
+              <div className="h-72 bg-gray-500 rounded-3xl"></div>
+              <div className="h-27 bg-purple-500 rounded-3xl"></div>
+              <div className="h-72 bg-yellow-500 rounded-3xl"></div>
+              <div className="h-72 bg-pink-500 rounded-3xl"></div>
+            </div>
+          </div>
         </div>
       </section>
     </div>
