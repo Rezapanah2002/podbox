@@ -337,23 +337,24 @@ function Home() {
               </div>
             </div>
           </div>
-        </div>
-        {/* Section-3 */}
-        <div className="w-full flex flex-col justify-center items-center p-20">
-          <h1 className="text-2xl">مشخصات فنی سخت افزار پادباکس</h1>
-          <div className="w-3/5 mx-auto mt-10">
-            <div className="grid grid-cols-4 grid-rows-2 gap-10">
-              <div className="h-72 bg-orange-500 rounded-3xl"></div>
-              <div className="h-72 bg-green-500 rounded-3xl"></div>
-              <div className="h-72 bg-red-500 rounded-3xl"></div>
-              <div className="h-72 bg-teal-500 rounded-3xl"></div>
-              <div className="h-72 bg-gray-500 rounded-3xl"></div>
-              <div className="h-27 bg-purple-500 rounded-3xl"></div>
-              <div className="h-72 bg-yellow-500 rounded-3xl"></div>
-              <div className="h-72 bg-pink-500 rounded-3xl"></div>
+
+          <div className="w-full flex flex-col justify-center items-center p-20 mt-32">
+            <h1 className="text-2xl">مشخصات فنی سخت افزار پادباکس</h1>
+            <div className="w-3/5 mx-auto mt-10">
+              <div className="grid grid-cols-4 grid-rows-2 gap-10">
+                <div className="h-72 bg-orange-500 rounded-3xl"></div>
+                <div className="h-72 bg-green-500 rounded-3xl"></div>
+                <div className="h-72 bg-red-500 rounded-3xl"></div>
+                <div className="h-72 bg-teal-500 rounded-3xl"></div>
+                <div className="h-72 bg-gray-500 rounded-3xl"></div>
+                <div className="h-27 bg-purple-500 rounded-3xl"></div>
+                <div className="h-72 bg-yellow-500 rounded-3xl"></div>
+                <div className="h-72 bg-pink-500 rounded-3xl"></div>
+              </div>
             </div>
           </div>
         </div>
+        {/* Section-3 */}
       </section>
     </div>
   );
