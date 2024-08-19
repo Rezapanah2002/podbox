@@ -342,14 +342,46 @@ function Home() {
             <h1 className="text-2xl">مشخصات فنی سخت افزار پادباکس</h1>
             <div className="w-3/5 mx-auto mt-10">
               <div className="grid grid-cols-4 grid-rows-2 gap-10">
-                <div className="h-72 bg-orange-500 rounded-3xl"></div>
-                <div className="h-72 bg-green-500 rounded-3xl"></div>
-                <div className="h-72 bg-red-500 rounded-3xl"></div>
-                <div className="h-72 bg-teal-500 rounded-3xl"></div>
-                <div className="h-72 bg-gray-500 rounded-3xl"></div>
-                <div className="h-27 bg-purple-500 rounded-3xl"></div>
-                <div className="h-72 bg-yellow-500 rounded-3xl"></div>
-                <div className="h-72 bg-pink-500 rounded-3xl"></div>
+                <div className="h-72 bg-orange-500 rounded-3xl">
+                  <div className="w-1/2 bg-stone-600 rounded-full">
+                    <img src="../../../4k.png" className="" />
+                  </div>
+                </div>
+                <div className="h-72 bg-green-500 rounded-3xl">
+                  <div className="w-1/2 bg-stone-600 rounded-full">
+                    <img src="../../../usb.png" className="" />
+                  </div>
+                </div>
+                <div className="h-72 bg-red-500 rounded-3xl">
+                  <div className="w-1/2 bg-stone-600 rounded-full">
+                    <img src="../../../storag.png" className="" />
+                  </div>
+                </div>
+                <div className="h-72 bg-teal-500 rounded-3xl">
+                  <div className="w-1/2 bg-stone-600 rounded-full">
+                    <img src="../../../ram.png" className="" />
+                  </div>
+                </div>
+                <div className="h-72 bg-gray-500 rounded-3xl">
+                  <div className="w-1/2 bg-stone-600 rounded-full">
+                    <img src="../../../wifi.png" className="" />
+                  </div>
+                </div>
+                <div className="h-27 bg-purple-500 rounded-3xl">
+                  <div className="w-1/2 bg-stone-600 rounded-full">
+                    <img src="../../../os.png" className="" />
+                  </div>
+                </div>
+                <div className="h-72 bg-yellow-500 rounded-3xl">
+                  <div className="w-1/2 bg-stone-600 rounded-full">
+                    <img src="../../../bluetooth.png" className="" />
+                  </div>
+                </div>
+                <div className="h-72 bg-pink-500 rounded-3xl">
+                  <div className="w-1/2 bg-stone-600 rounded-full">
+                    <img src="../../../cpu.png" className="" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
