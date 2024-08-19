@@ -192,7 +192,7 @@ function Home() {
             </motion.div>
           </div>
           {/* cards */}
-          <div class="flex justify-center gap-5 w-full h-screen">
+          <div class="flex justify-center gap-5 w-full min-h-screen">
             {/* plus */}
             <div class="cursor-pointer p-10 flex flex-col items-center justify-evenly w-1/5 h-1/2 text-right bg-gradient-to-r from-stone-900 to-stone-800 rounded-3xl opacity-90 hover:opacity-70">
               <div className="flex flex-col justify-end mb-5">
@@ -288,19 +288,15 @@ function Home() {
         </div>
 
         {/* Section-2 */}
-        <div className="p-16 w-full h-screen flex flex-col items-center bg-gradient-to-r from-black via-stone-900 to-black">
-          <div className="text-center">
-            <h1 className="text-2xl font-medium bg-gradient-to-l from-indigo-600 to-indigo-400 bg-clip-text inline-block text-transparent">
-              اندروید باکس پادباکس
-            </h1>
-            <h2 className="m-10 text-5xl">
-              اندروید باکسی که به آن احتیاج دارید
-            </h2>
-            <p className="mb-5 text-2xl text-stone-500">
-              مشخصات فنی و نحوه استفاده
-            </p>
-          </div>
-          <div className="p-10 m-5 w-1/2 h-1/2 bg-gradient-to-l from-indigo-700 via-indigo-600 to-indigo-500 rounded-2xl flex flex-col items-start">
+        <div className="p-16 w-full min-h-screen flex flex-col items-center bg-gradient-to-r from-black via-stone-900 to-black text-center">
+          <h1 className="text-2xl font-medium bg-gradient-to-l from-indigo-600 to-indigo-400 bg-clip-text inline-block text-transparent">
+            اندروید باکس پادباکس
+          </h1>
+          <h2 className="m-10 text-5xl">اندروید باکسی که به آن احتیاج دارید</h2>
+          <p className="mb-5 text-2xl text-stone-500">
+            مشخصات فنی و نحوه استفاده
+          </p>
+          <div className="p-10 m-5 w-3/5 bg-gradient-to-l from-indigo-700 via-indigo-600 to-indigo-500 rounded-2xl flex flex-col items-start">
             <div className="text-right">
               <h1 className="text-2xl m-2">پادباکس چیست؟</h1>
               <p className="text-xl">
@@ -317,6 +313,29 @@ function Home() {
             <button className="font-thin justify-start m-5 border-2 border-transparent bg-white rounded-2xl text-black px-7 py-3">
               تماشای ویدئو
             </button>
+          </div>
+          <div className="flex items-stretch w-3/5 gap-3">
+            <div className="p-10 bg-stone-100 rounded-2xl bg-opacity-10">
+              <div className="flex flex-col justify-center items-end text-right">
+                <h1 className="text-2xl mb-8">محتویات جعبه پادباکس</h1>
+                <p className="mb-10">
+                  سخت‌افزار پادباکس، یک عدد ایرموس، یک عدد دانگل ایرموس، دو عدد
+                  باتری نیم‌قلمی، یک عدد آداپتور، یک عدد کابل HDMI، دفترچه
+                  راهنما
+                </p>
+                <img src="../../../contain.png" />
+              </div>
+            </div>
+            <div className="p-10 bg-stone-100 rounded-2xl bg-opacity-10">
+              <div className="flex flex-col justify-center items-end text-right">
+                <h1 className="text-xl mb-8">ریموت کنترل ایرموس پادباکس</h1>
+                <p className="mb-10">
+                  ایرموس پادباکس؛ وسیله‌ای برای ناوبری آسان در صفحه تلویزیون و
+                  رفتن به منوهای مختلف
+                </p>
+                <img src="remote.png" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
