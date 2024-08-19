@@ -13,7 +13,7 @@ function Home() {
     <div>
       <section className="bg-custom-gradient h-full w-full">
         <div className="flex flex-col items-center whitespace-pre-wrap py-32 px-10">
-          <h1 className="text-6xl text-center font-thin w-full relative mb-10 max-[745px]:text-2xl">
+          <h1 className="text-6xl text-center font-thin w-full mb-10 max-[745px]:text-2xl">
             پادباکس، دوستی برای سرگرمی و زندگی هوشمند
           </h1>
           <h3 className="text-2xl text-wrap text-center w-4/5 max-[745px]:text-lg">
@@ -27,7 +27,7 @@ function Home() {
           </a>
         </div>
         {/* Section-1 */}
-        <div>
+        <div className="">
           {/* animation */}
           <div className="w-full h-screen flex justify-center mb-0 max-[1210px]:hidden">
             <motion.div className="flex justify-center w-2/3 h-3/5 bg-gradient-to-r from-b-from via-b-via to-b-to rounded-3xl relative">
@@ -288,7 +288,37 @@ function Home() {
         </div>
 
         {/* Section-2 */}
-        <div></div>
+        <div className="p-16 w-full h-screen flex flex-col items-center bg-gradient-to-r from-black via-stone-900 to-black">
+          <div className="text-center">
+            <h1 className="text-2xl font-medium bg-gradient-to-l from-indigo-600 to-indigo-400 bg-clip-text inline-block text-transparent">
+              اندروید باکس پادباکس
+            </h1>
+            <h2 className="m-10 text-5xl">
+              اندروید باکسی که به آن احتیاج دارید
+            </h2>
+            <p className="mb-5 text-2xl text-stone-500">
+              مشخصات فنی و نحوه استفاده
+            </p>
+          </div>
+          <div className="p-10 m-5 w-1/2 h-1/2 bg-gradient-to-l from-indigo-700 via-indigo-600 to-indigo-500 rounded-2xl flex flex-col items-start">
+            <div className="text-right">
+              <h1 className="text-2xl m-2">پادباکس چیست؟</h1>
+              <p className="text-xl">
+                سخت‌افزار پادباکس می‌تواند هر تلویزیون معمولی را به یک تلویزیون
+                هوشمند تبدیل کند. پادباکس مینی‌کامپیوتری است که کارکردن با آن
+                بسیار آسان است و شما را به دنیای بی‌انتهای سرگرمی‌های اینترنتی
+                می‌برد: فیلم، سریال، موسیقی، بازی، پادکست و... که روی اینترنت
+                وجود دارد. از سوی دیگر سخت‌افزار پادباکس برای هوشمندسازی زندگی
+                دیجیتال شما طراحی شده. با اندروید باکس پادباکس شما یک دستیار
+                هوشمند برای کنترل و استفاده از تمام مزایا و خدمات یک ‌خانه
+                هوشمند را خواهید داشت
+              </p>
+            </div>
+            <button className="font-thin justify-start m-5 border-2 border-transparent bg-white rounded-2xl text-black px-7 py-3">
+              تماشای ویدئو
+            </button>
+          </div>
+        </div>
       </section>
     </div>
   );
