@@ -12,7 +12,7 @@ function Home() {
   return (
     <div>
       <section className="bg-custom-gradient h-full w-full">
-        <div className="flex flex-col items-center whitespace-pre-wrap py-32 px-10">
+        <div className="flex flex-col items-center whitespace-pre-wrap pt-56 px-10">
           <h1 className="text-6xl text-center font-thin w-full mb-10 max-[745px]:text-2xl">
             پادباکس، دوستی برای سرگرمی و زندگی هوشمند
           </h1>
@@ -27,7 +27,7 @@ function Home() {
           </a>
         </div>
         {/* Section-1 */}
-        <div className="">
+        <div className="relative mt-[100px]">
           {/* animation */}
           <div className="w-full h-screen flex justify-center mb-0 max-[1210px]:hidden">
             <motion.div className="flex justify-center w-2/3 h-3/5 bg-gradient-to-r from-b-from via-b-via to-b-to rounded-3xl relative">
