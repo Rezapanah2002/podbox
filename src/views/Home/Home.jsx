@@ -29,8 +29,8 @@ function Home() {
         {/* Section-1 */}
         <div className="relative mt-[100px]">
           {/* animation */}
-          <div className="w-full h-screen flex justify-center mb-0 max-[1210px]:hidden">
-            <motion.div className="flex justify-center w-2/3 h-3/5 bg-gradient-to-r from-b-from via-b-via to-b-to rounded-3xl relative">
+          <div className="w-full h-[90vh] flex justify-center mb-0 max-[1210px]:hidden">
+            <motion.div className="flex justify-center w-2/3 h-4/5 bg-gradient-to-r from-b-from via-b-via to-b-to rounded-3xl relative">
               <motion.img
                 className="px-16 pt-20 w-full h-full absolute bottom-0"
                 src="../../../anim-bg.png"
@@ -192,7 +192,7 @@ function Home() {
             </motion.div>
           </div>
           {/* cards */}
-          <div class="flex justify-center gap-5 w-full min-h-screen">
+          <div class="flex justify-center gap-5 w-full mb-20 mt-0">
             {/* plus */}
             <div class="cursor-pointer p-10 flex flex-col items-center justify-evenly w-1/5 h-1/2 text-right bg-gradient-to-r from-stone-900 to-stone-800 rounded-3xl opacity-90 hover:opacity-70">
               <div className="flex flex-col justify-end mb-5">
@@ -337,6 +337,10 @@ function Home() {
               </div>
             </div>
           </div>
+        </div>
+        {/* Section-3 */}
+        <div className="flex flex-col justify-center items-center p-10">
+          <h1>مشخصات فنی سخت افزار پادباکس</h1>
         </div>
       </section>
     </div>
