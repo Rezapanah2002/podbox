@@ -14,7 +14,7 @@ function Home() {
     <div>
       <section className="bg-custom-gradient h-full w-full">
         <div className="flex flex-col items-center whitespace-pre-wrap pt-56 px-10">
-          <h1 className="pt-12 px-40 text-8xl text-center font-thin w-full mb-10 max-[745px]:text-2xl">
+          <h1 className="pt-12 px-40 text-8xl text-center font-light w-full mb-10 max-[745px]:text-2xl">
             پادباکس، دوستی برای سرگرمی و زندگی هوشمند
           </h1>
           <h3 className="text-2xl text-wrap text-center w-4/5 max-[745px]:text-lg">
@@ -336,7 +336,7 @@ function Home() {
                   ایرموس پادباکس؛ وسیله‌ای برای ناوبری آسان در صفحه تلویزیون و
                   رفتن به منوهای مختلف
                 </p>
-                <img src="remote.png" className="" />
+                <img src="remote.png" />
               </div>
             </div>
           </div>
