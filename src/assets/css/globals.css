@@ -44,3 +44,12 @@ body {
     @apply bg-c-bg border border-white rounded-3xl px-8 py-10 my-5;
   }
 }
+
+.drag-none {
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}

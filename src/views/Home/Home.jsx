@@ -3,6 +3,7 @@
 import React from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import Link from "next/link";
+import "@/assets/css/globals.css";
 
 function Home() {
   const { scrollY } = useScroll();
@@ -64,6 +65,7 @@ function Home() {
 
               {/* soul */}
               <Link
+                className="drag-none"
                 href="https://app.podbox.ir/videos/detail/3350655"
                 target="_blank"
               >
@@ -91,7 +93,7 @@ function Home() {
                   }}
                 >
                   <motion.img
-                    className="relative w-4/5 rounded-2xl opacity-70"
+                    className="relative w-4/5 rounded-2xl opacity-70 drag-none"
                     src="../../../soul.jpeg"
                   />
                 </motion.div>
@@ -100,6 +102,7 @@ function Home() {
               {/* dune */}
               <motion.div>
                 <Link
+                  className="drag-none"
                   href="https://app.podbox.ir/videos/detail/3353042"
                   target="_blank"
                 >
@@ -126,8 +129,8 @@ function Home() {
                       duration: 0.25,
                     }}
                   >
-                    <motion.img
-                      className="relative w-4/5 rounded-2xl opacity-70"
+                    <img
+                      className="relative w-4/5 rounded-2xl opacity-70 drag-none"
                       src="../../../dune.jpeg"
                     />
                   </motion.div>
@@ -157,7 +160,7 @@ function Home() {
                 }}
               >
                 <motion.img
-                  className="relative w-2/5 rounded-3xl"
+                  className="relative w-2/5 rounded-3xl drag-none"
                   src="../../../music.png"
                 />
               </motion.div>
@@ -185,7 +188,7 @@ function Home() {
                 }}
               >
                 <motion.img
-                  className="relative w-2/5 rounded-3xl"
+                  className="relative w-2/5 rounded-3xl drag-none"
                   src="../../../gaming.png"
                 />
               </motion.div>
@@ -316,7 +319,7 @@ function Home() {
           </div>
           <div className="flex items-stretch w-3/5 gap-3">
             <div className="p-10 bg-stone-100 rounded-2xl bg-opacity-10">
-              <div className="flex flex-col justify-center items-end text-right">
+              <div className="flex flex-col justify-center items-center text-right">
                 <h1 className="text-2xl mb-8">محتویات جعبه پادباکس</h1>
                 <p className="mb-10">
                   سخت‌افزار پادباکس، یک عدد ایرموس، یک عدد دانگل ایرموس، دو عدد
@@ -327,13 +330,13 @@ function Home() {
               </div>
             </div>
             <div className="p-10 bg-stone-100 rounded-2xl bg-opacity-10">
-              <div className="flex flex-col justify-center items-end text-right">
+              <div className="flex flex-col justify-center items-center text-right">
                 <h1 className="text-xl mb-8">ریموت کنترل ایرموس پادباکس</h1>
                 <p className="mb-10">
                   ایرموس پادباکس؛ وسیله‌ای برای ناوبری آسان در صفحه تلویزیون و
                   رفتن به منوهای مختلف
                 </p>
-                <img src="remote.png" />
+                <img src="remote.png" className="" />
               </div>
             </div>
           </div>
