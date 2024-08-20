@@ -195,9 +195,9 @@ function Home() {
             </motion.div>
           </div>
           {/* cards */}
-          <div class="flex justify-center gap-5 w-full mb-20 mt-0">
+          <div className="flex justify-center gap-5 w-full mb-20 mt-0">
             {/* plus */}
-            <div class="cursor-pointer p-10 flex flex-col items-center justify-evenly w-1/5 h-1/2 text-right bg-gradient-to-r from-stone-900 to-stone-800 rounded-3xl opacity-90 hover:opacity-70">
+            <div className="cursor-pointer p-10 flex flex-col items-center justify-evenly w-1/5 h-1/2 text-right bg-gradient-to-r from-stone-900 to-stone-800 rounded-3xl opacity-90 hover:opacity-70">
               <div className="flex flex-col justify-end mb-5">
                 <div className="flex items-center justify-between mb-3">
                   <svg
@@ -227,7 +227,7 @@ function Home() {
             </div>
 
             {/* luncher */}
-            <div class="cursor-pointer p-10 flex flex-col items-center justify-evenly w-1/5 h-1/2 text-right bg-gradient-to-r from-stone-900 to-stone-800 rounded-3xl opacity-90 hover:opacity-70">
+            <div className="cursor-pointer p-10 flex flex-col items-center justify-evenly w-1/5 h-1/2 text-right bg-gradient-to-r from-stone-900 to-stone-800 rounded-3xl opacity-90 hover:opacity-70">
               <div className="flex flex-col justify-end mb-5">
                 <div className="flex items-center justify-between mb-3">
                   <svg
@@ -346,46 +346,99 @@ function Home() {
             id="sectionTech"
           >
             <h1 className="text-2xl">مشخصات فنی سخت افزار پادباکس</h1>
-            <div className="w-3/5 mx-auto mt-10">
+            <div className="w-3/5 m-10">
               <div className="grid grid-cols-4 grid-rows-2 gap-10">
-                <div className="h-72 bg-orange-500 rounded-3xl">
-                  <div className="w-1/2 bg-stone-600 rounded-full">
-                    <img src="../../../4k.png" className="" />
+                <div className="h-full bg-gradient-to-t from-orange-800 via-orange-900 to-orange-950 bg-opacity-10 rounded-3xl flex flex-col justify-start items-center">
+                  <div className="w-1/2 m-5 bg-stone-300 rounded-full p-5 flex justify-center items-center bg-opacity-10">
+                    <img src="../../../4k.png" />
+                  </div>
+                  <div className="text-center px-5">
+                    <p className="mb-5">4K @60fps, UHD,HDR+</p>
+                    <p className="text-xs">
+                      گرافیک قدرتمند برای تماشای فیلم و بازی با کیفیت 4K و حتی
+                      بالاتر
+                    </p>
                   </div>
                 </div>
-                <div className="h-72 bg-green-500 rounded-3xl">
-                  <div className="w-1/2 bg-stone-600 rounded-full">
-                    <img src="../../../usb.png" className="" />
+                <div className="h-full bg-gradient-to-t from-green-800 via-green-900 to-green-950 bg-opacity-10 rounded-3xl flex flex-col justify-start items-center">
+                  <div className="w-1/3 h-full m-5 bg-stone-300 rounded-full p-5 flex justify-center items-center bg-opacity-10">
+                    <img src="../../../usb.png" />
+                  </div>
+                  <div className="text-center py-2 px-5">
+                    <p className="mb-5">USB2.0 + USB3.0</p>
+                    <p className="text-xs">
+                      USB 2.0، USB 3.0، HDMI 2.1، AV و... برای اتصال تلویزیون،
+                      حافظه جانبی
+                    </p>
                   </div>
                 </div>
-                <div className="h-72 bg-red-500 rounded-3xl">
-                  <div className="w-1/2 bg-stone-600 rounded-full">
-                    <img src="../../../storag.png" className="" />
+                <div className="h-full bg-gradient-to-t from-red-800 via-red-900 to-red-950 bg-opacity-10 rounded-3xl flex flex-col justify-start items-center">
+                  <div className="w-1/2 m-5 bg-stone-300 rounded-full p-5 flex justify-center items-center bg-opacity-10">
+                    <img src="../../../storag.png" />
+                  </div>
+                  <div className="text-center px-5">
+                    <p className="mb-5">32GB</p>
+                    <p className="text-xs">
+                      قابلیت ارتقا حافظه داخلی تا 1 ترابایت با کمک حافظه خارجی
+                    </p>
                   </div>
                 </div>
-                <div className="h-72 bg-teal-500 rounded-3xl">
-                  <div className="w-1/2 bg-stone-600 rounded-full">
-                    <img src="../../../ram.png" className="" />
+                <div className="h-full bg-gradient-to-t from-teal-800 via-teal-900 to-teal-950 bg-opacity-10 rounded-3xl flex flex-col justify-start items-center">
+                  <div className="w-1/2 h-full m-5 bg-stone-300 rounded-full p-5 flex justify-center items-center bg-opacity-10">
+                    <img src="../../../ram.png" />
+                  </div>
+                  <div className="text-center py-2 px-5">
+                    <p className="mb-5">4GB DDR3</p>
+                    <p className="text-xs">
+                      RAM پرسرعت برای چندوظیفگی و اجرای برنامه‌های سنگین
+                    </p>
                   </div>
                 </div>
-                <div className="h-72 bg-gray-500 rounded-3xl">
-                  <div className="w-1/2 bg-stone-600 rounded-full">
-                    <img src="../../../wifi.png" className="" />
+                <div className="h-full bg-gradient-to-t from-neutral-700 via-neutral-800 to-neutral-900 bg-opacity-10 rounded-3xl flex flex-col justify-start items-center">
+                  <div className="w-1/2 m-5 bg-stone-300 rounded-full p-5 flex justify-center items-center bg-opacity-10">
+                    <img src="../../../wifi.png" />
+                  </div>
+                  <div className="text-center px-5">
+                    <p className="mb-5">5/2.4 GHz</p>
+                    <p className="text-xs">
+                      وای‌فای 2.4 گیگاهرتز و 5 گیگاهرتز برای اتصال سریع‌تر و
+                      پایداری بهتر
+                    </p>
                   </div>
                 </div>
-                <div className="h-27 bg-purple-500 rounded-3xl">
-                  <div className="w-1/2 bg-stone-600 rounded-full">
-                    <img src="../../../os.png" className="" />
+                <div className="h-full bg-gradient-to-t from-fuchsia-800 via-fuchsia-900 to-fuchsia-950 bg-opacity-10 rounded-3xl flex flex-col justify-start items-center">
+                  <div className="w-1/2 m-5 bg-stone-300 rounded-full p-5 flex justify-center items-center bg-opacity-10">
+                    <img src="../../../os.png" />
+                  </div>
+                  <div className="text-center px-5">
+                    <p className="mb-5">Android 9</p>
+                    <p className="text-xs mb-5">
+                      رابط کاربری روان و اختصاصی پادباکس برای دسترسی به دنیای
+                      محتوا
+                    </p>
                   </div>
                 </div>
-                <div className="h-72 bg-yellow-500 rounded-3xl">
-                  <div className="w-1/2 bg-stone-600 rounded-full">
-                    <img src="../../../bluetooth.png" className="" />
+                <div className="h-full bg-gradient-to-t from-yellow-800 via-yellow-900 to-yellow-950 bg-opacity-10 rounded-3xl flex flex-col justify-start items-center">
+                  <div className="w-1/2 m-5 bg-stone-300 rounded-full p-5 flex justify-center items-center bg-opacity-10">
+                    <img src="../../../bluetooth.png" />
+                  </div>
+                  <div className="text-center px-5">
+                    <p className="mb-5">Bluetooth4.0</p>
+                    <p className="text-xs">
+                      اتصال سریع و بدون تأخیر به دستگاه‌های بلوتوثی مانند هدست،
+                      بلندگو و...
+                    </p>
                   </div>
                 </div>
-                <div className="h-72 bg-pink-500 rounded-3xl">
-                  <div className="w-1/2 bg-stone-600 rounded-full">
-                    <img src="../../../cpu.png" className="" />
+                <div className="h-full bg-gradient-to-t from-pink-800 via-pink-900 to-pink-950 bg-opacity-10 rounded-3xl flex flex-col justify-start items-center">
+                  <div className="w-1/2 m-5 bg-stone-300 rounded-full p-5 flex justify-center items-center bg-opacity-10">
+                    <img src="../../../cpu.png" />
+                  </div>
+                  <div className="text-center px-5">
+                    <p className="mb-5">Amlogic S905x3</p>
+                    <p className="text-xs">
+                      پردازنده قدرتمند برای اجرای روان برنامه‌ها و بازی‌ها
+                    </p>
                   </div>
                 </div>
               </div>
