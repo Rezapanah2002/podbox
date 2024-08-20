@@ -34,7 +34,7 @@ function Home() {
     }
   }, []);
 
-  const y1 = useTransform(scrollY, section1Range, [120, -120]);
+  const y1 = useTransform(scrollY, section1Range, [150, -120]);
   const smoothY1 = useSpring(y1, { stiffness: 200, damping: 50 });
 
   const y3 = useTransform(scrollY, section3Range, [-150, 150]);
