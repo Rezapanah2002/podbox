@@ -1,37 +1,67 @@
 "use client";
 
 import React from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import Link from "next/link";
 import "@/assets/css/globals.css";
 
 function Home() {
   const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 600], [100, -10]);
-  const smoothY = useSpring(y, { stiffness: 600, damping: 200 });
+  const section1Ref = useRef(null);
+  const section3Ref = useRef(null);
+
+  const [section1Range, setSection1Range] = useState([0, 0]);
+  const [section3Range, setSection3Range] = useState([0, 0]);
+
+  useEffect(() => {
+    const section1Element = section1Ref.current;
+    const section3Element = section3Ref.current;
+
+    if (section1Element && section3Element) {
+      const section1Rect = section1Element.getBoundingClientRect();
+      const section3Rect = section3Element.getBoundingClientRect();
+
+      const section1Start =
+        section1Rect.top + window.scrollY - window.innerHeight / 2;
+      const section1End = section1Rect.bottom + window.scrollY;
+      setSection1Range([section1Start, section1End]);
+
+      const section3Start =
+        section3Rect.top + window.scrollY - window.innerHeight / 2;
+      const section3End = section3Rect.bottom + window.scrollY;
+      setSection3Range([section3Start, section3End]);
+    }
+  }, []);
+
+  const y1 = useTransform(scrollY, section1Range, [120, -120]);
+  const smoothY1 = useSpring(y1, { stiffness: 200, damping: 50 });
+
+  const y3 = useTransform(scrollY, section3Range, [-150, 150]);
+  const smoothY3 = useSpring(y3, { stiffness: 200, damping: 50 });
 
   return (
     <div>
       <section className="bg-custom-gradient h-full w-full">
         <div className="flex flex-col items-center whitespace-pre-wrap pt-56 px-10">
-          <h1 className="pt-12 px-40 text-8xl text-center font-light w-full mb-10 max-[745px]:text-2xl">
+          <h1 className="pt-12 px-40 text-7xl text-center font-light w-full mb-10 max-[745px]:text-2xl">
             پادباکس، دوستی برای سرگرمی و زندگی هوشمند
           </h1>
-          <h3 className="text-2xl text-wrap text-center w-4/5 max-[745px]:text-lg">
+          <h3 className="text-xl text-wrap text-center w-4/5 max-[745px]:text-lg">
             شما که دنبال استریم سرگرمی و آوردن هوشمندی دیجیتال به خانه و
             زندگی‌تان هستید، شما پادباکس را کم دارید
           </h3>
           <a href="https://app.podbox.ir/" target="_blank" className="mt-10">
-            <button className="font-thin text-2xl flex justify-center items-center py-6 px-10 border-2 bg-w-b border-b-from rounded-xl hover:scale-110 duration-500">
+            <button className="font-thin text-xl flex justify-center items-center py-6 px-10 border-2 bg-w-b border-b-from rounded-xl hover:scale-110 duration-500">
               ورود به وب اپلیکیشن پادباکس
             </button>
           </a>
         </div>
         {/* Section-1 */}
-        <div className="relative mt-[100px]">
+        <div className="relative mt-[100px]" ref={section1Ref}>
           {/* animation */}
-          <div className="w-full h-[90vh] flex justify-center max-[1210px]:hidden">
-            <motion.div className="flex justify-center w-2/3 h-4/5 bg-gradient-to-r from-b-from via-b-via to-b-to rounded-3xl relative">
+          <div className="w-full h-[80vh] flex justify-center max-[1210px]:hidden">
+            <motion.div className="flex justify-center w-3/5 h-3/4 bg-gradient-to-r from-b-from via-b-via to-b-to rounded-3xl relative">
               <motion.img
                 className="px-16 pt-20 w-full h-full absolute bottom-0"
                 src="../../../anim-bg.png"
@@ -39,7 +69,7 @@ function Home() {
 
               {/* voice */}
               <motion.div
-                className="bg-gray-400 bg-opacity-20 rounded-3xl w-1/3 h-28 absolute -top-28 -left-28 flex justify-evenly items-center cursor-grab"
+                className="bg-gray-400 bg-opacity-20 rounded-3xl w-1/3 h-24 absolute -top-28 -left-28 flex justify-evenly items-center cursor-grab"
                 drag
                 dragConstraints={{
                   top: 0,
@@ -51,7 +81,7 @@ function Home() {
                   bounceStiffness: 600,
                   bounceDamping: 10,
                 }}
-                style={{ y: smoothY }}
+                style={{ y: smoothY1 }}
                 whileHover={{
                   scale: 1.08,
                 }}
@@ -83,7 +113,7 @@ function Home() {
                     bounceDamping: 10,
                   }}
                   style={{
-                    y: smoothY,
+                    y: smoothY1,
                   }}
                   whileHover={{
                     scale: 1.08,
@@ -120,7 +150,7 @@ function Home() {
                       bounceDamping: 10,
                     }}
                     style={{
-                      y: smoothY,
+                      y: smoothY1,
                     }}
                     whileHover={{
                       scale: 1.08,
@@ -151,7 +181,7 @@ function Home() {
                   bounceStiffness: 600,
                   bounceDamping: 10,
                 }}
-                style={{ y: smoothY }}
+                style={{ y: smoothY1 }}
                 whileHover={{
                   scale: 1.08,
                 }}
@@ -160,14 +190,14 @@ function Home() {
                 }}
               >
                 <motion.img
-                  className="relative w-2/5 rounded-3xl drag-none"
+                  className="relative w-2/5 drag-none"
                   src="../../../music.png"
                 />
               </motion.div>
 
               {/* gaming */}
               <motion.div
-                className="bg-gray-400 bg-opacity-20 rounded-3xl w-24 h-24 absolute bottom-28 -right-10 flex justify-center items-center cursor-grab"
+                className="bg-gray-400 bg-opacity-20 rounded-3xl w-20 h-20 absolute bottom-28 -right-10 flex justify-center items-center cursor-grab"
                 drag
                 dragConstraints={{
                   top: 0,
@@ -179,7 +209,7 @@ function Home() {
                   bounceStiffness: 600,
                   bounceDamping: 10,
                 }}
-                style={{ y: smoothY }}
+                style={{ y: smoothY1 }}
                 whileHover={{
                   scale: 1.08,
                 }}
@@ -188,7 +218,7 @@ function Home() {
                 }}
               >
                 <motion.img
-                  className="relative w-2/5 rounded-3xl drag-none"
+                  className="relative w-1/2 drag-none"
                   src="../../../gaming.png"
                 />
               </motion.div>
@@ -448,7 +478,11 @@ function Home() {
         </div>
 
         {/* Section-3 */}
-        <div className="p-16 w-full min-h-screen flex flex-col items-center bg-gradient-radial from-emerald-950 to-stone-950 text-center">
+        <div
+          className="p-16 w-full min-h-screen flex flex-col items-center bg-gradient-radial from-emerald-950 to-stone-950 text-center"
+          id="section-3"
+          ref={section3Ref}
+        >
           <h1 className="text-2xl font-medium bg-gradient-to-l from-emerald-700 to-emerald-400 bg-clip-text inline-block text-transparent">
             لانچر پادباکس
           </h1>
@@ -456,6 +490,340 @@ function Home() {
           <p className="mb-5 text-2xl text-stone-500">
             .لانچر پادباکس راهش را به برندهای مختلف تلویزیون ایرانی بازکرده است
           </p>
+
+          {/* animation */}
+          <div className="w-full h-screen flex justify-center max-[1210px]:hidden">
+            <motion.div className="flex justify-center w-2/3 h-4/5 rounded-3xl relative">
+              <motion.img
+                className="px-16 pt-20 w-full h-full absolute bottom-0"
+                src="../../../g-anim-bg.png"
+              />
+              {/* gaming#1 */}
+              <motion.div
+                className="bg-gray-200 bg-opacity-10 rounded-3xl w-32 h-32 absolute top-32 -right-5 flex justify-center items-center cursor-grab"
+                drag
+                dragConstraints={{
+                  top: 0,
+                  right: 0,
+                  bottom: 0,
+                  left: 0,
+                }}
+                dragTransition={{
+                  bounceStiffness: 600,
+                  bounceDamping: 10,
+                }}
+                style={{ y: smoothY3 }}
+                whileHover={{
+                  scale: 1.08,
+                }}
+                transition={{
+                  duration: 0.25,
+                }}
+              >
+                <motion.img
+                  className="relative w-1/3 drag-none"
+                  src="../../../gaming.png"
+                />
+              </motion.div>
+              {/* gaming#2 */}
+              <motion.div
+                className="bg-gray-200 bg-opacity-10 rounded-2xl w-24 h-24 absolute top-52 left-1 flex justify-center items-center cursor-grab"
+                drag
+                dragConstraints={{
+                  top: 0,
+                  right: 0,
+                  bottom: 0,
+                  left: 0,
+                }}
+                dragTransition={{
+                  bounceStiffness: 600,
+                  bounceDamping: 10,
+                }}
+                style={{ y: smoothY3 }}
+                whileHover={{
+                  scale: 1.08,
+                }}
+                transition={{
+                  duration: 0.25,
+                }}
+              >
+                <motion.img
+                  className="relative w-1/3 drag-none"
+                  src="../../../gaming.png"
+                />
+              </motion.div>
+              {/* music */}
+              <motion.div
+                className="bg-gray-200 bg-opacity-10 rounded-2xl w-16 h-16 absolute bottom-52 flex justify-center items-center cursor-grab"
+                drag
+                dragConstraints={{
+                  top: 0,
+                  right: 0,
+                  bottom: 0,
+                  left: 0,
+                }}
+                dragTransition={{
+                  bounceStiffness: 600,
+                  bounceDamping: 10,
+                }}
+                style={{ y: smoothY3 }}
+                whileHover={{
+                  scale: 1.08,
+                }}
+                transition={{
+                  duration: 0.25,
+                }}
+              >
+                <motion.img
+                  className="relative w-1/3 drag-none"
+                  src="../../../music.png"
+                />
+              </motion.div>
+              {/* note */}
+              <motion.div
+                className="bg-gray-200 bg-opacity-10 rounded-xl w-12 h-12 absolute bottom-40 right-1/3 flex justify-center items-center cursor-grab"
+                drag
+                dragConstraints={{
+                  top: 0,
+                  right: 0,
+                  bottom: 0,
+                  left: 0,
+                }}
+                dragTransition={{
+                  bounceStiffness: 600,
+                  bounceDamping: 10,
+                }}
+                style={{ y: smoothY3 }}
+                whileHover={{
+                  scale: 1.08,
+                }}
+                transition={{
+                  duration: 0.25,
+                }}
+              >
+                <motion.img
+                  className="relative w-1/3 drag-none"
+                  src="../../../not.png"
+                />
+              </motion.div>
+              {/* video cam */}
+              <motion.div
+                className="bg-gray-200 bg-opacity-10 rounded-xl w-10 h-10 absolute bottom-32 right-1/2 flex justify-center items-center cursor-grab"
+                drag
+                dragConstraints={{
+                  top: 0,
+                  right: 0,
+                  bottom: 0,
+                  left: 0,
+                }}
+                dragTransition={{
+                  bounceStiffness: 600,
+                  bounceDamping: 10,
+                }}
+                style={{ y: smoothY3 }}
+                whileHover={{
+                  scale: 1.08,
+                }}
+                transition={{
+                  duration: 0.25,
+                }}
+              >
+                <motion.img
+                  className="relative w-1/3 drag-none"
+                  src="../../../vid-cam.png"
+                />
+              </motion.div>
+              {/* ufo#1 */}
+              <motion.div
+                className="bg-gray-200 bg-opacity-10 rounded-2xl w-20 h-20 absolute left-56 bottom-32 flex justify-center items-center  cursor-grab"
+                drag
+                dragConstraints={{
+                  top: 0,
+                  right: 0,
+                  bottom: 0,
+                  left: 0,
+                }}
+                dragTransition={{
+                  bounceStiffness: 600,
+                  bounceDamping: 10,
+                }}
+                style={{ y: smoothY3 }}
+                whileHover={{
+                  scale: 1.08,
+                }}
+                transition={{
+                  duration: 0.25,
+                }}
+              >
+                <motion.img
+                  className="relative w-1/3 rounded-3xl drag-none"
+                  src="../../../ufo.png"
+                />
+              </motion.div>
+              {/* ufo#2 */}
+              <motion.div
+                className="bg-gray-200 bg-opacity-10 rounded-2xl w-20 h-20 absolute right-28 bottom-32 flex justify-center items-center  cursor-grab"
+                drag
+                dragConstraints={{
+                  top: 0,
+                  right: 0,
+                  bottom: 0,
+                  left: 0,
+                }}
+                dragTransition={{
+                  bounceStiffness: 600,
+                  bounceDamping: 10,
+                }}
+                style={{ y: smoothY3 }}
+                whileHover={{
+                  scale: 1.08,
+                }}
+                transition={{
+                  duration: 0.25,
+                }}
+              >
+                <motion.img
+                  className="relative w-1/3 drag-none"
+                  src="../../../ufo.png"
+                />
+              </motion.div>
+              {/* mic#1 */}
+              <motion.div
+                className="bg-gray-200 bg-opacity-10 rounded-2xl w-16 h-16 absolute -left-5 bottom-32 flex justify-center items-center cursor-grab"
+                drag
+                dragConstraints={{
+                  top: 0,
+                  right: 0,
+                  bottom: 0,
+                  left: 0,
+                }}
+                dragTransition={{
+                  bounceStiffness: 600,
+                  bounceDamping: 10,
+                }}
+                style={{ y: smoothY3 }}
+                whileHover={{
+                  scale: 1.08,
+                }}
+                transition={{
+                  duration: 0.25,
+                }}
+              >
+                <motion.img
+                  className="relative w-1/3 drag-none"
+                  src="../../../mic.png"
+                />
+              </motion.div>
+              {/* shoping bag */}
+              <motion.div
+                className="bg-gray-200 bg-opacity-10 rounded-xl w-12 h-12 absolute bottom-28 left-32 flex justify-center items-center cursor-grab"
+                drag
+                dragConstraints={{
+                  top: 0,
+                  right: 0,
+                  bottom: 0,
+                  left: 0,
+                }}
+                dragTransition={{
+                  bounceStiffness: 600,
+                  bounceDamping: 10,
+                }}
+                style={{ y: smoothY3 }}
+                whileHover={{
+                  scale: 1.08,
+                }}
+                transition={{
+                  duration: 0.25,
+                }}
+              >
+                <motion.img
+                  className="relative w-1/3 drag-none"
+                  src="../../../bag.png"
+                />
+              </motion.div>
+              {/* mic#2 */}
+              <motion.div
+                className="bg-gray-200 bg-opacity-10 rounded-2xl w-16 h-16 absolute -right-4 bottom-32 flex justify-center items-center cursor-grab"
+                drag
+                dragConstraints={{
+                  top: 0,
+                  right: 0,
+                  bottom: 0,
+                  left: 0,
+                }}
+                dragTransition={{
+                  bounceStiffness: 600,
+                  bounceDamping: 10,
+                }}
+                style={{ y: smoothY3 }}
+                whileHover={{
+                  scale: 1.08,
+                }}
+                transition={{
+                  duration: 0.25,
+                }}
+              >
+                <motion.img
+                  className="relative w-1/3 drag-none"
+                  src="../../../mic.png"
+                />
+              </motion.div>
+              {/* usb#1 */}
+              <motion.div
+                className="bg-gray-200 bg-opacity-10 rounded-xl w-10 h-10 absolute -right-10 bottom-5 flex justify-center items-center cursor-grab"
+                drag
+                dragConstraints={{
+                  top: 0,
+                  right: 0,
+                  bottom: 0,
+                  left: 0,
+                }}
+                dragTransition={{
+                  bounceStiffness: 600,
+                  bounceDamping: 10,
+                }}
+                style={{ y: smoothY3 }}
+                whileHover={{
+                  scale: 1.08,
+                }}
+                transition={{
+                  duration: 0.25,
+                }}
+              >
+                <motion.img
+                  className="relative w-1/3 drag-none"
+                  src="../../../usb.png"
+                />
+              </motion.div>
+              {/* usb#2 */}
+              <motion.div
+                className="bg-gray-200 bg-opacity-10 rounded-xl w-12 h-12 absolute -left-5 bottom-5 flex justify-center items-center cursor-grab"
+                drag
+                dragConstraints={{
+                  top: 0,
+                  right: 0,
+                  bottom: 0,
+                  left: 0,
+                }}
+                dragTransition={{
+                  bounceStiffness: 600,
+                  bounceDamping: 10,
+                }}
+                style={{ y: smoothY3 }}
+                whileHover={{
+                  scale: 1.08,
+                }}
+                transition={{
+                  duration: 0.25,
+                }}
+              >
+                <motion.img
+                  className="relative w-1/3 drag-none"
+                  src="../../../usb.png"
+                />
+              </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
     </div>
