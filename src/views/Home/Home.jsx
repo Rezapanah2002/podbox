@@ -341,7 +341,10 @@ function Home() {
             </div>
           </div>
 
-          <div className="w-full flex flex-col justify-center items-center p-20 mt-32">
+          <div
+            className="w-full flex flex-col justify-center items-center p-20 mt-32"
+            id="sectionTech"
+          >
             <h1 className="text-2xl">مشخصات فنی سخت افزار پادباکس</h1>
             <div className="w-3/5 mx-auto mt-10">
               <div className="grid grid-cols-4 grid-rows-2 gap-10">
