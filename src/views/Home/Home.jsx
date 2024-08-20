@@ -7,7 +7,7 @@ import "@/assets/css/globals.css";
 
 function Home() {
   const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 600], [100, -100]);
+  const y = useTransform(scrollY, [0, 600], [100, -10]);
   const smoothY = useSpring(y, { stiffness: 600, damping: 200 });
 
   return (
@@ -291,7 +291,7 @@ function Home() {
         </div>
 
         {/* Section-2 */}
-        <div className="p-16 w-full min-h-screen flex flex-col items-center bg-gradient-to-r from-stone-950 via-indigo-950 to-stone-950 text-center">
+        <div className="p-16 w-full min-h-screen flex flex-col items-center bg-gradient-radial from-indigo-950 to-stone-950 text-center">
           <h1 className="text-2xl font-medium bg-gradient-to-l from-indigo-600 to-indigo-400 bg-clip-text inline-block text-transparent">
             اندروید باکس پادباکس
           </h1>
@@ -313,7 +313,7 @@ function Home() {
                 هوشمند را خواهید داشت
               </p>
             </div>
-            <button className="font-thin justify-start m-5 border-2 border-transparent bg-white rounded-2xl text-black px-7 py-3">
+            <button className="justify-start m-5 border-2 border-transparent bg-white rounded-2xl text-black px-7 py-3 hover:scale-105 duration-300 hover:shadow-2xl">
               تماشای ویدئو
             </button>
           </div>
@@ -341,14 +341,15 @@ function Home() {
             </div>
           </div>
 
+          {/* specification */}
           <div
-            className="w-full flex flex-col justify-center items-center p-20 mt-32"
+            className="w-full h-full flex flex-col justify-center items-center m-32"
             id="sectionTech"
           >
-            <h1 className="text-2xl">مشخصات فنی سخت افزار پادباکس</h1>
-            <div className="w-3/5 m-10">
+            <h1 className="text-2xl mb-10">مشخصات فنی سخت افزار پادباکس</h1>
+            <div className="w-3/5">
               <div className="grid grid-cols-4 grid-rows-2 gap-10">
-                <div className="h-full bg-gradient-to-t from-orange-800 via-orange-900 to-orange-950 bg-opacity-10 rounded-3xl flex flex-col justify-start items-center">
+                <div className="h-full bg-gradient-to-t from-orange-800 via-orange-900 to-orange-950 rounded-3xl flex flex-col justify-start items-center">
                   <div className="w-2/5 m-5 bg-stone-300 rounded-full p-5 flex justify-center items-center bg-opacity-10">
                     <img src="../../../4k.png" />
                   </div>
@@ -360,7 +361,7 @@ function Home() {
                     </p>
                   </div>
                 </div>
-                <div className="h-full bg-gradient-to-t from-green-800 via-green-900 to-green-950 bg-opacity-10 rounded-3xl flex flex-col justify-start items-center">
+                <div className="h-full bg-gradient-to-t from-green-800 via-green-900 to-green-950 rounded-3xl flex flex-col justify-start items-center">
                   <div className="aspect-square w-2/5 m-5 bg-stone-300 rounded-full p-5 flex justify-center items-center bg-opacity-10">
                     <img src="../../../usb.png" />
                   </div>
@@ -372,7 +373,7 @@ function Home() {
                     </p>
                   </div>
                 </div>
-                <div className="h-full bg-gradient-to-t from-red-800 via-red-900 to-red-950 bg-opacity-5 rounded-3xl flex flex-col justify-start items-center">
+                <div className="h-full bg-gradient-to-t from-red-800 via-red-900 to-red-950 rounded-3xl flex flex-col justify-start items-center">
                   <div className="w-2/5 m-5 bg-stone-300 rounded-full p-5 flex justify-center items-center bg-opacity-10">
                     <img src="../../../storag.png" />
                   </div>
@@ -383,7 +384,7 @@ function Home() {
                     </p>
                   </div>
                 </div>
-                <div className="h-full bg-gradient-to-t from-teal-800 via-teal-900 to-teal-950 bg-opacity-10 rounded-3xl flex flex-col justify-start items-center">
+                <div className="h-full bg-gradient-to-t from-teal-800 via-teal-900 to-teal-950 rounded-3xl flex flex-col justify-start items-center">
                   <div className="aspect-square w-2/5 m-5 bg-stone-300 rounded-full p-5 flex justify-center items-center bg-opacity-10">
                     <img src="../../../ram.png" />
                   </div>
@@ -394,7 +395,7 @@ function Home() {
                     </p>
                   </div>
                 </div>
-                <div className="h-full bg-gradient-to-t from-neutral-700 via-neutral-800 to-neutral-900 bg-opacity-10 rounded-3xl flex flex-col justify-start items-center">
+                <div className="h-full bg-gradient-to-t from-neutral-700 via-neutral-800 to-neutral-900 rounded-3xl flex flex-col justify-start items-center">
                   <div className="w-2/5 m-5 bg-stone-300 rounded-full p-5 flex justify-center items-center bg-opacity-10">
                     <img src="../../../wifi.png" />
                   </div>
@@ -406,7 +407,7 @@ function Home() {
                     </p>
                   </div>
                 </div>
-                <div className="h-full bg-gradient-to-t from-fuchsia-800 via-fuchsia-900 to-fuchsia-950 bg-opacity-10 rounded-3xl flex flex-col justify-start items-center">
+                <div className="h-full bg-gradient-to-t from-fuchsia-800 via-fuchsia-900 to-fuchsia-950 rounded-3xl flex flex-col justify-start items-center">
                   <div className="w-2/5 m-5 bg-stone-300 rounded-full p-5 flex justify-center items-center bg-opacity-10">
                     <img src="../../../os.png" />
                   </div>
@@ -418,7 +419,7 @@ function Home() {
                     </p>
                   </div>
                 </div>
-                <div className="h-full bg-gradient-to-t from-yellow-800 via-yellow-900 to-yellow-950 bg-opacity-10 rounded-3xl flex flex-col justify-start items-center">
+                <div className="h-full bg-gradient-to-t from-yellow-800 via-yellow-900 to-yellow-950 rounded-3xl flex flex-col justify-start items-center">
                   <div className="w-2/5 m-5 bg-stone-300 rounded-full p-5 flex justify-center items-center bg-opacity-10">
                     <img src="../../../bluetooth.png" />
                   </div>
@@ -430,7 +431,7 @@ function Home() {
                     </p>
                   </div>
                 </div>
-                <div className="h-full bg-gradient-to-t from-pink-800 via-pink-900 to-pink-950 bg-opacity-10 rounded-3xl flex flex-col justify-start items-center">
+                <div className="h-full bg-gradient-to-t from-pink-800 via-pink-900 to-pink-950 rounded-3xl flex flex-col justify-start items-center">
                   <div className="w-2/5 m-5 bg-stone-300 rounded-full p-5 flex justify-center items-center bg-opacity-10">
                     <img src="../../../cpu.png" />
                   </div>
@@ -445,7 +446,17 @@ function Home() {
             </div>
           </div>
         </div>
+
         {/* Section-3 */}
+        <div className="p-16 w-full min-h-screen flex flex-col items-center bg-gradient-radial from-emerald-950 to-stone-950 text-center">
+          <h1 className="text-2xl font-medium bg-gradient-to-l from-emerald-700 to-emerald-400 bg-clip-text inline-block text-transparent">
+            لانچر پادباکس
+          </h1>
+          <h2 className="m-10 text-5xl">تلویزیون با طعم پادباکس</h2>
+          <p className="mb-5 text-2xl text-stone-500">
+            .لانچر پادباکس راهش را به برندهای مختلف تلویزیون ایرانی بازکرده است
+          </p>
+        </div>
       </section>
     </div>
   );
