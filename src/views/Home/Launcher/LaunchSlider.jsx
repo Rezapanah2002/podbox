@@ -41,38 +41,37 @@ function LaunchSlider() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setSeconds((seconds) => seconds + 1);
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [slides.length]);
 
   return (
-    <div>
-      <div className="m-40 flex flex-col justify-center">
-        {slides.map((slide, index) => (
-          <div key={index} className="m-10 flex items-center justify-between">
-            <img src={slide.image} className="w-1/3 rounded-3xl" />
-            <div className="text-right m-5 flex flex-col items-end justify-center">
-              <div className="sec3-icons">
-                <img src={slide.icon} />
-              </div>
-              <h1 className="text-2xl font-light mb-5">{slide.title}</h1>
-              <p className="text-stone-400">{slide.description}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-      {/* <AnimatePresence>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: { duration: 0.5 } }}
-          exit={{ opacity: 0 }}
-          style={{ fontSize: 100 }}
-          key={seconds}
-        >
-          {seconds}
-        </motion.div>
-      </AnimatePresence> */}
+    <div className="m-40 flex justify-center items-center">
+      <AnimatePresence>
+        {slides.map(
+          (slide, index) =>
+            index === currentSlide && (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -100 }}
+                transition={{ duration: 0.5 }}
+                className="m-10 flex items-center justify-between w-full"
+              >
+                <img src={slide.image} className="w-1/3 rounded-3xl" />
+                <div className="text-right m-5 flex flex-col items-end justify-center">
+                  <div className="sec3-icons">
+                    <img src={slide.icon} />
+                  </div>
+                  <h1 className="text-2xl font-light mb-5">{slide.title}</h1>
+                  <p className="text-stone-400">{slide.description}</p>
+                </div>
+              </motion.div>
+            )
+        )}
+      </AnimatePresence>
     </div>
   );
 }
