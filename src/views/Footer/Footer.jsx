@@ -64,7 +64,7 @@ function Footer() {
             isMenuOpen || width > 853 ? "gap-8 flex justify-end" : "hidden"
           } ${
             isMenuOpen
-              ? "fixed flex-col items-center p-10 justify-between mx-0 bottom-10 left-0 w-full h-full bg-black"
+              ? "fixed flex-col items-center p-10 justify-between mx-0 bottom-10 left-0 w-full h-full bg-black overflow-y-scroll"
               : "gap-4 flex justify-end"
           }`}
           id="fmenu"

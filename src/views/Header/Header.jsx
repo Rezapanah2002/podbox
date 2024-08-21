@@ -30,7 +30,7 @@ function Header() {
   }, [width, isMenuOpen]);
 
   return (
-    <header className="border-b-2 border-stone-950 shadow-sm shadow-stone-950 fixed top-0 left-0 w-full z-50 bg-black">
+    <header className="border-b-2 border-stone-950 shadow-sm shadow-stone-950 fixed top-0 left-0 w-full z-50 bg-black max-[1076px]:sticky">
       {/* navbar */}
       <nav className="text-slate-300 flex items-center flex-row justify-between font-light text-base w-full px-12 py-2">
         {/* button */}
@@ -44,7 +44,7 @@ function Header() {
               : "hidden"
           } ${
             isMenuOpen
-              ? "fixed flex-col items-end py-20 pr-20 top-9 mx-0 left-0 w-full h-full bg-black"
+              ? "fixed flex-col items-end py-20 pr-20 top-9 mx-0 left-0 w-full h-full bg-black overflow-y-scroll"
               : "flex justify-evenly gap-12"
           }`}
           id="menu"
