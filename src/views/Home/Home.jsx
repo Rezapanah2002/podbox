@@ -321,7 +321,7 @@ function Home() {
         </div>
 
         {/* Section-2 */}
-        <div className="p-16 w-full min-h-screen flex flex-col items-center bg-gradient-radial from-indigo-950 to-stone-950 text-center">
+        <div className="p-16 w-full min-h-screen flex flex-col items-center bg-gradient-radial from-indigo-950 to-black text-center">
           <h1 className="text-2xl font-medium bg-gradient-to-l from-indigo-600 to-indigo-400 bg-clip-text inline-block text-transparent">
             اندروید باکس پادباکس
           </h1>
@@ -329,7 +329,7 @@ function Home() {
           <p className="mb-5 text-2xl text-stone-500">
             مشخصات فنی و نحوه استفاده
           </p>
-          <div className="p-10 m-5 w-3/5 bg-gradient-to-l from-indigo-700 via-indigo-600 to-indigo-500 rounded-2xl flex flex-col items-start">
+          <div className="p-10 m-5 w-3/5 bg-gradient-to-l from-indigo-800 via-indigo-600 to-indigo-300 rounded-2xl flex flex-col items-start">
             <div className="text-right">
               <h1 className="text-2xl m-2">پادباکس چیست؟</h1>
               <p className="text-xl">
@@ -378,7 +378,7 @@ function Home() {
           >
             <h1 className="text-2xl mb-10">مشخصات فنی سخت افزار پادباکس</h1>
             <div className="w-3/5">
-              <div className="grid grid-cols-4 grid-rows-2 gap-10">
+              <div className="grid grid-cols-4 grid-rows-2 gap-5">
                 <div className="h-full bg-gradient-to-t from-orange-800 via-orange-900 to-orange-950 rounded-3xl flex flex-col justify-start items-center">
                   <div className="w-2/5 m-5 bg-stone-300 rounded-full p-5 flex justify-center items-center bg-opacity-10">
                     <img src="../../../4k.png" />
@@ -479,7 +479,7 @@ function Home() {
 
         {/* Section-3 */}
         <div
-          className="p-16 w-full min-h-screen flex flex-col items-center bg-gradient-radial from-emerald-950 to-stone-950 text-center"
+          className="p-16 w-full min-h-screen flex flex-col items-center bg-gradient-radial from-emerald-950 to-black text-center"
           id="section-3"
           ref={section3Ref}
         >
@@ -832,64 +832,68 @@ function Home() {
                   <div className="sec3-icons">
                     <img src="../../../headphone.png" />
                   </div>
-                  <h2>کتاب صوتی و پادکست</h2>
-                  <p>
+                  <h2 className="font-semibold mb-5">کتاب صوتی و پادکست</h2>
+                  <p className="text-stone-400 font-light">
                     راحت‌ترین راه دسترسی به دانش و اطلاعات، کتاب‌های صوتی و
-                    پادکست‌ها هستند که در پادباکس در دسترس است!
+                    پادکست‌ها هستند که در پادباکس در دسترس است
                   </p>
                 </div>
                 <div className="sec3-cards">
                   <div className="sec3-icons">
                     <img src="../../../note.png" />
                   </div>
-                  <h2>موسیقی</h2>
-                  <p>
+                  <h2 className="font-semibold mb-5">موسیقی</h2>
+                  <p className="text-stone-400 font-light">
                     از شرق تا غرب، از سنتی تا راک، از آرامش‌بخش تا حماسی و هر
-                    چیزی که حال و هوای شنیدنش را داشته باشید!
+                    چیزی که حال و هوای شنیدنش را داشته باشید
                   </p>
                 </div>
                 <div className="sec3-cards">
                   <div className="sec3-icons">
                     <img src="../../../movie.png" />
                   </div>
-                  <h2>فیلم و سریال</h2>
-                  <p>
+                  <h2 className="font-semibold mb-5">فیلم و سریال</h2>
+                  <p className="text-stone-400 font-light">
                     کاش زمان برای دیدن فیلم و سریال‌های پادباکس داشته باشید! اگر
-                    نه همه‌شان، حداقل بهترین‌ها!
+                    نه همه‌شان، حداقل بهترین‌ها
                   </p>
                 </div>
                 <div className="sec3-cards">
                   <div className="sec3-icons">
                     <img src="../../../finance.png" />
                   </div>
-                  <h2>خدمات مالی</h2>
-                  <p>
+                  <h2 className="font-semibold mb-5">خدمات مالی</h2>
+                  <p className="text-stone-400 font-light">
                     پرداخت قبض و خرید شارژ تلفن، بسته اینترنت و شارژ کیف پول در
-                    بخش خدمات مالی پادباکس!
+                    بخش خدمات مالی پادباکس
                   </p>
                 </div>
                 <div className="sec3-cards">
                   <div className="sec3-icons">
                     <img src="../../../book.png" />
                   </div>
-                  <h2>مجله و اخبار</h2>
-                  <p>
+                  <h2 className="font-semibold mb-5">مجله و اخبار</h2>
+                  <p className="text-stone-400 font-light">
                     اگر اهل خواندن هستید، بخش مجله و اخبار همان جایی است که هر
-                    روز به آن احتیاج دارید و دنبالش می‌گشتید!
+                    روز به آن احتیاج دارید و دنبالش می‌گشتید
                   </p>
                 </div>
                 <div className="sec3-cards">
                   <div className="sec3-icons">
                     <img src="../../../gamepad.png" />
                   </div>
-                  <h2>پخش زنده</h2>
-                  <p>
+                  <h2 className="font-semibold mb-5">پخش زنده</h2>
+                  <p className="text-stone-400 font-light">
                     تمام شبکه‌های تلویزیونی و رادیویی را هر جایی که هستید و با
-                    اینترنت نیم‌بها تماشا کنید!
+                    اینترنت نیم‌بها تماشا کنید
                   </p>
                 </div>
               </div>
             </div>
+          </div>
+          {/* Slider */}
+          <div className="m-40">
+            <h1>اسلایدر انیمیشن دار</h1>
           </div>
         </div>
       </section>

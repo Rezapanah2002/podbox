@@ -46,7 +46,7 @@ body {
     @apply cursor-pointer p-10 flex flex-col items-center justify-evenly w-1/5 h-1/2 text-right bg-gradient-to-r from-stone-900 to-stone-800 rounded-3xl opacity-90 hover:opacity-70
    }
    .sec3-cards{
-    @apply p-10 flex flex-col items-end justify-between text-right w-full h-full bg-white bg-opacity-10 rounded-3xl
+    @apply px-9 py-16 flex flex-col items-end justify-center text-right w-full h-full bg-white bg-opacity-10 rounded-3xl
    }
    .sec3-icons{
     @apply mb-10 w-16 h-16 bg-stone-900 rounded-xl flex justify-center items-center shadow-md shadow-stone-800
