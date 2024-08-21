@@ -53,7 +53,7 @@ function Footer() {
     <div>
       <footer className="flex items-center justify-end py-4 font-light px-20 border-t-2 border-stone-950 text-gray-500 ">
         <div className="flex mx-5 gap-3">
-          {socials.map((social, index) => (
+          {socials?.map((social, index) => (
             <a key={index} href={social.href} target={social.target}>
               <img src={social.src} alt={social.alt} />
             </a>
