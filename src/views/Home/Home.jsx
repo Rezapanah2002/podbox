@@ -35,7 +35,7 @@ function Home() {
   }, []);
 
   const y1 = useTransform(scrollY, section1Range, [150, -120]);
-  const smoothY1 = useSpring(y1, { stiffness: 200, damping: 50 });
+  const smoothY1 = useSpring(y1, { stiffness: 100, damping: 50 });
 
   const y3 = useTransform(scrollY, section3Range, [-150, 150]);
   const smoothY3 = useSpring(y3, { stiffness: 200, damping: 50 });
@@ -52,7 +52,7 @@ function Home() {
             زندگی‌تان هستید، شما پادباکس را کم دارید
           </h3>
           <a href="https://app.podbox.ir/" target="_blank" className="mt-10">
-            <button className="font-thin text-xl flex justify-center items-center py-6 px-10 border-2 bg-w-b border-b-from rounded-xl hover:scale-110 duration-500">
+            <button className="font-light text-xl flex justify-center items-center py-6 px-10 border-2 bg-w-b border-b-from rounded-xl hover:scale-110 duration-500">
               ورود به وب اپلیکیشن پادباکس
             </button>
           </a>
@@ -69,7 +69,7 @@ function Home() {
 
               {/* voice */}
               <motion.div
-                className="bg-gray-400 bg-opacity-20 rounded-3xl w-1/3 h-24 absolute -top-28 -left-28 flex justify-evenly items-center cursor-grab"
+                className="anim-items w-1/3 h-24 -top-28 -left-28"
                 drag
                 dragConstraints={{
                   top: 0,
@@ -100,7 +100,7 @@ function Home() {
                 target="_blank"
               >
                 <motion.div
-                  className="bg-gray-400 bg-opacity-20 rounded-3xl w-64 h-80 absolute -top-44 -right-28 flex justify-center items-center cursor-grab"
+                  className="anim-items w-64 h-80 -top-44 -right-28"
                   drag
                   dragConstraints={{
                     top: 0,
@@ -137,7 +137,7 @@ function Home() {
                   target="_blank"
                 >
                   <motion.div
-                    className="bg-gray-400 bg-opacity-20 rounded-3xl w-56 h-72 absolute bottom-16 -left-20 flex justify-center items-center cursor-grab"
+                    className="anim-items w-56 h-72 bottom-16 -left-20"
                     drag
                     dragConstraints={{
                       top: 0,
@@ -169,7 +169,7 @@ function Home() {
 
               {/* music */}
               <motion.div
-                className="bg-gray-400 bg-opacity-20 rounded-3xl w-40 h-40 absolute bottom-52 right-1/2 flex justify-center items-center  cursor-grab"
+                className="anim-items w-40 h-40 bottom-52 right-1/2"
                 drag
                 dragConstraints={{
                   top: 0,
@@ -197,7 +197,7 @@ function Home() {
 
               {/* gaming */}
               <motion.div
-                className="bg-gray-400 bg-opacity-20 rounded-3xl w-20 h-20 absolute bottom-28 -right-10 flex justify-center items-center cursor-grab"
+                className="anim-items w-20 h-20 bottom-28 -right-10"
                 drag
                 dragConstraints={{
                   top: 0,
@@ -227,7 +227,7 @@ function Home() {
           {/* cards */}
           <div className="flex justify-center gap-5 w-full mb-20 mt-0">
             {/* plus */}
-            <div className="cursor-pointer p-10 flex flex-col items-center justify-evenly w-1/5 h-1/2 text-right bg-gradient-to-r from-stone-900 to-stone-800 rounded-3xl opacity-90 hover:opacity-70">
+            <div className="sec1-cards">
               <div className="flex flex-col justify-end mb-5">
                 <div className="flex items-center justify-between mb-3">
                   <svg
@@ -257,7 +257,7 @@ function Home() {
             </div>
 
             {/* luncher */}
-            <div className="cursor-pointer p-10 flex flex-col items-center justify-evenly w-1/5 h-1/2 text-right bg-gradient-to-r from-stone-900 to-stone-800 rounded-3xl opacity-90 hover:opacity-70">
+            <div className="sec1-cards">
               <div className="flex flex-col justify-end mb-5">
                 <div className="flex items-center justify-between mb-3">
                   <svg
@@ -288,7 +288,7 @@ function Home() {
             </div>
 
             {/* android */}
-            <div class="cursor-pointer p-10 flex flex-col items-center justify-evenly text-right w-1/5 h-1/2 bg-gradient-to-r from-stone-900 to-stone-800 rounded-3xl opacity-90 hover:opacity-70">
+            <div className="sec1-cards">
               <div className="flex flex-col justify-end mb-5">
                 <div className="flex items-center justify-between mb-3">
                   <svg
@@ -348,7 +348,7 @@ function Home() {
             </button>
           </div>
           <div className="flex items-stretch w-3/5 gap-3">
-            <div className="p-10 bg-stone-100 rounded-2xl bg-opacity-10">
+            <div className="p-10 bg-white rounded-2xl bg-opacity-10">
               <div className="flex flex-col justify-center items-center text-right">
                 <h1 className="text-2xl mb-8">محتویات جعبه پادباکس</h1>
                 <p className="mb-10">
@@ -359,7 +359,7 @@ function Home() {
                 <img src="../../../contain.png" />
               </div>
             </div>
-            <div className="p-10 bg-stone-100 rounded-2xl bg-opacity-10">
+            <div className="p-10 bg-white rounded-2xl bg-opacity-10">
               <div className="flex flex-col justify-center items-center text-right">
                 <h1 className="text-xl mb-8">ریموت کنترل ایرموس پادباکس</h1>
                 <p className="mb-10">
@@ -500,7 +500,7 @@ function Home() {
               />
               {/* gaming#1 */}
               <motion.div
-                className="bg-gray-200 bg-opacity-10 rounded-3xl w-32 h-32 absolute top-32 -right-5 flex justify-center items-center cursor-grab"
+                className="anim-items w-32 h-32 top-32 -right-5"
                 drag
                 dragConstraints={{
                   top: 0,
@@ -527,7 +527,7 @@ function Home() {
               </motion.div>
               {/* gaming#2 */}
               <motion.div
-                className="bg-gray-200 bg-opacity-10 rounded-2xl w-24 h-24 absolute top-52 left-1 flex justify-center items-center cursor-grab"
+                className="anim-items w-24 h-24 top-52 left-1"
                 drag
                 dragConstraints={{
                   top: 0,
@@ -554,7 +554,7 @@ function Home() {
               </motion.div>
               {/* music */}
               <motion.div
-                className="bg-gray-200 bg-opacity-10 rounded-2xl w-16 h-16 absolute bottom-52 flex justify-center items-center cursor-grab"
+                className="anim-items w-16 h-16 bottom-52"
                 drag
                 dragConstraints={{
                   top: 0,
@@ -581,7 +581,7 @@ function Home() {
               </motion.div>
               {/* note */}
               <motion.div
-                className="bg-gray-200 bg-opacity-10 rounded-xl w-12 h-12 absolute bottom-40 right-1/3 flex justify-center items-center cursor-grab"
+                className="anim-items w-12 h-12 bottom-40 right-1/3"
                 drag
                 dragConstraints={{
                   top: 0,
@@ -603,12 +603,12 @@ function Home() {
               >
                 <motion.img
                   className="relative w-1/3 drag-none"
-                  src="../../../not.png"
+                  src="../../../m-note.png"
                 />
               </motion.div>
               {/* video cam */}
               <motion.div
-                className="bg-gray-200 bg-opacity-10 rounded-xl w-10 h-10 absolute bottom-32 right-1/2 flex justify-center items-center cursor-grab"
+                className="anim-items w-12 h-12 bottom-32 right-1/2"
                 drag
                 dragConstraints={{
                   top: 0,
@@ -635,7 +635,7 @@ function Home() {
               </motion.div>
               {/* ufo#1 */}
               <motion.div
-                className="bg-gray-200 bg-opacity-10 rounded-2xl w-20 h-20 absolute left-56 bottom-32 flex justify-center items-center  cursor-grab"
+                className="anim-items w-20 h-20 left-56 bottom-32"
                 drag
                 dragConstraints={{
                   top: 0,
@@ -662,7 +662,7 @@ function Home() {
               </motion.div>
               {/* ufo#2 */}
               <motion.div
-                className="bg-gray-200 bg-opacity-10 rounded-2xl w-20 h-20 absolute right-28 bottom-32 flex justify-center items-center  cursor-grab"
+                className="anim-items w-20 h-20 right-28 bottom-32"
                 drag
                 dragConstraints={{
                   top: 0,
@@ -689,7 +689,7 @@ function Home() {
               </motion.div>
               {/* mic#1 */}
               <motion.div
-                className="bg-gray-200 bg-opacity-10 rounded-2xl w-16 h-16 absolute -left-5 bottom-32 flex justify-center items-center cursor-grab"
+                className="anim-items w-16 h-16 -left-5 bottom-32"
                 drag
                 dragConstraints={{
                   top: 0,
@@ -716,7 +716,7 @@ function Home() {
               </motion.div>
               {/* shoping bag */}
               <motion.div
-                className="bg-gray-200 bg-opacity-10 rounded-xl w-12 h-12 absolute bottom-28 left-32 flex justify-center items-center cursor-grab"
+                className="anim-items w-12 h-12 bottom-28 left-32"
                 drag
                 dragConstraints={{
                   top: 0,
@@ -743,7 +743,7 @@ function Home() {
               </motion.div>
               {/* mic#2 */}
               <motion.div
-                className="bg-gray-200 bg-opacity-10 rounded-2xl w-16 h-16 absolute -right-4 bottom-32 flex justify-center items-center cursor-grab"
+                className="anim-items w-16 h-16 -right-4 bottom-32"
                 drag
                 dragConstraints={{
                   top: 0,
@@ -770,7 +770,7 @@ function Home() {
               </motion.div>
               {/* usb#1 */}
               <motion.div
-                className="bg-gray-200 bg-opacity-10 rounded-xl w-10 h-10 absolute -right-10 bottom-5 flex justify-center items-center cursor-grab"
+                className="anim-items w-10 h-10 -right-10 bottom-5"
                 drag
                 dragConstraints={{
                   top: 0,
@@ -797,7 +797,7 @@ function Home() {
               </motion.div>
               {/* usb#2 */}
               <motion.div
-                className="bg-gray-200 bg-opacity-10 rounded-xl w-12 h-12 absolute -left-5 bottom-5 flex justify-center items-center cursor-grab"
+                className="anim-items w-12 h-12 -left-5 bottom-5"
                 drag
                 dragConstraints={{
                   top: 0,
@@ -823,6 +823,73 @@ function Home() {
                 />
               </motion.div>
             </motion.div>
+          </div>
+          {/* Cards */}
+          <div className="w-full h-full flex flex-col justify-center items-center">
+            <div className=" w-2/3 h-4/5">
+              <div className="grid grid-cols-3 grid-rows-2 gap-10">
+                <div className="sec3-cards">
+                  <div className="sec3-icons">
+                    <img src="../../../headphone.png" />
+                  </div>
+                  <h2>کتاب صوتی و پادکست</h2>
+                  <p>
+                    راحت‌ترین راه دسترسی به دانش و اطلاعات، کتاب‌های صوتی و
+                    پادکست‌ها هستند که در پادباکس در دسترس است!
+                  </p>
+                </div>
+                <div className="sec3-cards">
+                  <div className="sec3-icons">
+                    <img src="../../../note.png" />
+                  </div>
+                  <h2>موسیقی</h2>
+                  <p>
+                    از شرق تا غرب، از سنتی تا راک، از آرامش‌بخش تا حماسی و هر
+                    چیزی که حال و هوای شنیدنش را داشته باشید!
+                  </p>
+                </div>
+                <div className="sec3-cards">
+                  <div className="sec3-icons">
+                    <img src="../../../movie.png" />
+                  </div>
+                  <h2>فیلم و سریال</h2>
+                  <p>
+                    کاش زمان برای دیدن فیلم و سریال‌های پادباکس داشته باشید! اگر
+                    نه همه‌شان، حداقل بهترین‌ها!
+                  </p>
+                </div>
+                <div className="sec3-cards">
+                  <div className="sec3-icons">
+                    <img src="../../../finance.png" />
+                  </div>
+                  <h2>خدمات مالی</h2>
+                  <p>
+                    پرداخت قبض و خرید شارژ تلفن، بسته اینترنت و شارژ کیف پول در
+                    بخش خدمات مالی پادباکس!
+                  </p>
+                </div>
+                <div className="sec3-cards">
+                  <div className="sec3-icons">
+                    <img src="../../../book.png" />
+                  </div>
+                  <h2>مجله و اخبار</h2>
+                  <p>
+                    اگر اهل خواندن هستید، بخش مجله و اخبار همان جایی است که هر
+                    روز به آن احتیاج دارید و دنبالش می‌گشتید!
+                  </p>
+                </div>
+                <div className="sec3-cards">
+                  <div className="sec3-icons">
+                    <img src="../../../gamepad.png" />
+                  </div>
+                  <h2>پخش زنده</h2>
+                  <p>
+                    تمام شبکه‌های تلویزیونی و رادیویی را هر جایی که هستید و با
+                    اینترنت نیم‌بها تماشا کنید!
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
