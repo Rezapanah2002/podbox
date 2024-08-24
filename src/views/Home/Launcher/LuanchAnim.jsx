@@ -93,7 +93,7 @@ function LuanchAnim() {
       <div className="w-full h-screen flex justify-center max-[1210px]:hidden">
         <motion.div className="flex justify-center w-2/3 h-4/5 rounded-3xl relative">
           <motion.img
-            className="px-16 pt-20 w-full h-full absolute bottom-0"
+            className="px-16 pt-20 w-full h-full absolute bottom-0 drag-none"
             src="../../../g-anim-bg.png"
           />
           {items.map((item, index) => (

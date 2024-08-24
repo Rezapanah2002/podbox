@@ -47,7 +47,7 @@ function LaunchSlider() {
   }, [slides.length]);
 
   return (
-    <div className="m-40 p-40 flex justify-center items-center">
+    <div className="m-40 p-20 flex justify-center items-center">
       <AnimatePresence>
         {slides.map(
           (slide, index) =>

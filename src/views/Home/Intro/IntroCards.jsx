@@ -1,9 +1,8 @@
 import React from "react";
 
-function Cards() {
+function IntroCards() {
   return (
     <div>
-      {/* cards */}
       <div className="flex justify-center gap-5 w-full mb-20 mt-0">
         {/* plus */}
         <div className="sec1-cards">
@@ -100,4 +99,4 @@ function Cards() {
   );
 }
 
-export default Cards;
+export default IntroCards;
