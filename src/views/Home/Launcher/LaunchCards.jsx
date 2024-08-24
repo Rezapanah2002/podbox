@@ -2,8 +2,8 @@ import React from "react";
 
 function LaunchCards() {
   return (
-    <div>
-      <div className="w-full h-full flex flex-col justify-center items-center">
+    <div className="w-5/6 flex justify-center items-center">
+      <div className="w-full min-h-screen flex flex-col justify-center items-center">
         <div className=" w-2/3 h-4/5">
           <div className="grid grid-cols-3 grid-rows-2 gap-10">
             <div className="sec3-cards">

@@ -42,12 +42,12 @@ function LaunchSlider() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
-    }, 5000);
+    }, 8000);
     return () => clearInterval(interval);
   }, [slides.length]);
 
   return (
-    <div className="m-40 flex justify-center items-center">
+    <div className="m-40 p-40 flex justify-center items-center">
       <AnimatePresence>
         {slides.map(
           (slide, index) =>
@@ -57,8 +57,8 @@ function LaunchSlider() {
                 initial={{ opacity: 0, x: 100 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -100 }}
-                transition={{ duration: 0.5 }}
-                className="m-10 flex items-center justify-between w-full"
+                transition={{ duration: 1, ease: [0.5, 0, 0.5, 1] }}
+                className="absolute m-10 flex items-center justify-between w-3/5"
               >
                 <img src={slide.image} className="w-1/3 rounded-3xl" />
                 <div className="text-right m-5 flex flex-col items-end justify-center">
