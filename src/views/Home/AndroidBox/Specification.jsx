@@ -2,7 +2,7 @@ import React from "react";
 
 function Specification() {
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div id="sectionTech" className="flex flex-col justify-center items-center">
       <h1 className="text-2xl mb-10">مشخصات فنی سخت افزار پادباکس</h1>
       <div className="w-3/5">
         <div className="grid grid-cols-4 grid-rows-2 gap-5">

@@ -54,6 +54,9 @@ body {
    .anim-items{
     @apply bg-white bg-opacity-10 rounded-2xl absolute flex justify-center items-center cursor-grab
    }
+   .app-cards{
+    @apply px-10 h-full bg-white bg-opacity-10 rounded-3xl flex flex-col justify-evenly items-center
+   }
 }
 
 .drag-none {

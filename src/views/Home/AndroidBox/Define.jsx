@@ -52,10 +52,7 @@ function Define() {
             </div>
           </div>
         </div>
-        <div
-          className="w-full h-full flex flex-col justify-center items-center m-32"
-          id="sectionTech"
-        >
+        <div className="w-full flex flex-col justify-center items-center m-32">
           <Specification />
         </div>
       </div>

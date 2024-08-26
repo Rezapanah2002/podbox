@@ -51,66 +51,84 @@ function Footer() {
 
   return (
     <div>
-      <footer className="flex items-center justify-end py-4 font-light px-20 border-t-2 border-stone-950 text-gray-500">
-        <div className="flex mx-5 gap-3">
-          {socials?.map((social, index) => (
-            <a key={index} href={social.href} target={social.target}>
-              <img src={social.src} alt={social.alt} />
+      <footer className=" font-light px-20 border-t-2 border-stone-950 text-gray-500">
+        <div className="flex items-center justify-evenly py-4">
+          <div className="flex justify-between">
+            <a
+              href="https://trustseal.enamad.ir/?id=465948&Code=IzKDL9tqJXK36EOgCtzjSZVafApgWgUy"
+              target="_blank"
+            >
+              <img src="../../../namad.png" className="w-16 mx-6" />
             </a>
-          ))}
-        </div>
-        <ul
-          className={`m-6 gap-10 ${
-            isMenuOpen || width > 853 ? "gap-8 flex justify-end" : "hidden"
-          } ${
-            isMenuOpen
-              ? "fixed flex-col items-center p-10 justify-between mx-0 bottom-10 left-0 w-full h-full bg-black overflow-y-scroll"
-              : "gap-4 flex justify-end"
-          }`}
-          id="fmenu"
-        >
-          {links.map((link, index) => (
-            <li className="footer-bar" key={index}>
-              {link.external ? (
-                <a href={link.href} target="_blank" rel="noopener noreferrer">
-                  {link.text}
-                </a>
-              ) : (
-                <Link
-                  className={`link ${
-                    pathname === link.href ? "text-gray-50" : ""
-                  }`}
-                  href={link.href}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {link.text}
-                </Link>
-              )}
-            </li>
-          ))}
-        </ul>
-        <div
-          onClick={toggleMenu}
-          id="arrow"
-          className={`flex items-center text-gray-500 cursor-pointer hover:text-white duration-300 ${
-            width <= 853 ? "block" : "hidden"
-          }`}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="size-4 m-1"
+            <a href="https://sapra.ir/" target="_blank">
+              <img src="../../../sapra.png" className="w-1/3" />
+            </a>
+          </div>
+          <div className="flex items-center mx-5 gap-3">
+            {socials?.map((social, index) => (
+              <a key={index} href={social.href} target={social.target}>
+                <img src={social.src} alt={social.alt} />
+              </a>
+            ))}
+
+            <ul
+              className={`m-6 gap-10 ${
+                isMenuOpen || width > 853 ? "gap-8 flex justify-end" : "hidden"
+              } ${
+                isMenuOpen
+                  ? "fixed flex-col items-center p-10 justify-between mx-0 bottom-10 left-0 w-full h-full bg-black overflow-y-scroll"
+                  : "gap-4 flex justify-end"
+              }`}
+              id="fmenu"
+            >
+              {links.map((link, index) => (
+                <li className="footer-bar" key={index}>
+                  {link.external ? (
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {link.text}
+                    </a>
+                  ) : (
+                    <Link
+                      className={`link ${
+                        pathname === link.href ? "text-gray-50" : ""
+                      }`}
+                      href={link.href}
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {link.text}
+                    </Link>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div
+            onClick={toggleMenu}
+            id="arrow"
+            className={`flex items-center text-gray-500 cursor-pointer hover:text-white duration-300 ${
+              width <= 853 ? "block" : "hidden"
+            }`}
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="m19.5 8.25-7.5 7.5-7.5-7.5"
-            />
-          </svg>
-          <p className="text-sm">سایر لینک ها</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-4 m-1"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="m19.5 8.25-7.5 7.5-7.5-7.5"
+              />
+            </svg>
+            <p className="text-sm">سایر لینک ها</p>
+          </div>
         </div>
       </footer>
     </div>

@@ -5,6 +5,7 @@ import "@/assets/css/globals.css";
 import AndroidBox from "./AndroidBox/AndroidBox";
 import Launcher from "./Launcher/Launcher";
 import Intro from "./Intro/Intro";
+import PodboxPlus from "./PodboxPlus/PodboxPlus";
 
 function Home() {
   return (
@@ -27,6 +28,7 @@ function Home() {
         <Intro />
         <AndroidBox />
         <Launcher />
+        <PodboxPlus />
       </section>
     </div>
   );
