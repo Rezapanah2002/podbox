@@ -10,8 +10,8 @@ function Specification() {
         مشخصات فنی سخت افزار پادباکس
       </h1>
       <div>
-        <div className="grid grid-cols-4 max-[1200px]:grid-cols-3 grid-rows-2 gap-5">
-          <div className="h-full bg-gradient-to-t from-orange-800 via-orange-900 to-orange-950 rounded-3xl flex flex-col justify-start items-center">
+        <div className="grid grid-cols-4 max-[1200px]:grid-cols-3 max-[870px]:grid-cols-1 grid-rows-2 gap-5">
+          <div className="h-full bg-gradient-to-t from-orange-800 via-orange-900 to-orange-950 rounded-3xl flex flex-col justify-start items-center mb-5">
             <div className="w-2/5 m-5 bg-stone-300 rounded-full p-5 flex justify-center items-center bg-opacity-10">
               <img src="../../../4k.png" />
             </div>
@@ -22,7 +22,7 @@ function Specification() {
               </p>
             </div>
           </div>
-          <div className="h-full bg-gradient-to-t from-green-800 via-green-900 to-green-950 rounded-3xl flex flex-col justify-start items-center">
+          <div className="h-full bg-gradient-to-t from-green-800 via-green-900 to-green-950 rounded-3xl flex flex-col justify-start items-center mb-5">
             <div className="aspect-square w-2/5 m-5 bg-stone-300 rounded-full p-5 flex justify-center items-center bg-opacity-10">
               <img src="../../../usb.png" />
             </div>
@@ -34,7 +34,7 @@ function Specification() {
               </p>
             </div>
           </div>
-          <div className="h-full bg-gradient-to-t from-red-800 via-red-900 to-red-950 rounded-3xl flex flex-col justify-start items-center">
+          <div className="h-full bg-gradient-to-t from-red-800 via-red-900 to-red-950 rounded-3xl flex flex-col justify-start items-center mb-5">
             <div className="w-2/5 m-5 bg-stone-300 rounded-full p-5 flex justify-center items-center bg-opacity-10">
               <img src="../../../storag.png" />
             </div>
@@ -45,7 +45,7 @@ function Specification() {
               </p>
             </div>
           </div>
-          <div className="h-full bg-gradient-to-t from-teal-800 via-teal-900 to-teal-950 rounded-3xl flex flex-col justify-start items-center">
+          <div className="h-full bg-gradient-to-t from-teal-800 via-teal-900 to-teal-950 rounded-3xl flex flex-col justify-start items-center mb-5">
             <div className="aspect-square w-2/5 m-5 bg-stone-300 rounded-full p-5 flex justify-center items-center bg-opacity-10">
               <img src="../../../ram.png" />
             </div>
@@ -56,7 +56,7 @@ function Specification() {
               </p>
             </div>
           </div>
-          <div className="h-full bg-gradient-to-t from-neutral-700 via-neutral-800 to-neutral-900 rounded-3xl flex flex-col justify-start items-center">
+          <div className="h-full bg-gradient-to-t from-neutral-700 via-neutral-800 to-neutral-900 rounded-3xl flex flex-col justify-start items-center mb-5">
             <div className="w-2/5 m-5 bg-stone-300 rounded-full p-5 flex justify-center items-center bg-opacity-10">
               <img src="../../../wifi.png" />
             </div>
@@ -68,7 +68,7 @@ function Specification() {
               </p>
             </div>
           </div>
-          <div className="h-full bg-gradient-to-t from-fuchsia-800 via-fuchsia-900 to-fuchsia-950 rounded-3xl flex flex-col justify-start items-center">
+          <div className="h-full bg-gradient-to-t from-fuchsia-800 via-fuchsia-900 to-fuchsia-950 rounded-3xl flex flex-col justify-start items-center mb-5">
             <div className="w-2/5 m-5 bg-stone-300 rounded-full p-5 flex justify-center items-center bg-opacity-10">
               <img src="../../../os.png" />
             </div>
@@ -79,7 +79,7 @@ function Specification() {
               </p>
             </div>
           </div>
-          <div className="h-full bg-gradient-to-t from-yellow-800 via-yellow-900 to-yellow-950 rounded-3xl flex flex-col justify-start items-center">
+          <div className="h-full bg-gradient-to-t from-yellow-800 via-yellow-900 to-yellow-950 rounded-3xl flex flex-col justify-start items-center mb-5">
             <div className="w-2/5 m-5 bg-stone-300 rounded-full p-5 flex justify-center items-center bg-opacity-10">
               <img src="../../../bluetooth.png" />
             </div>
@@ -91,7 +91,7 @@ function Specification() {
               </p>
             </div>
           </div>
-          <div className="h-full bg-gradient-to-t from-pink-800 via-pink-900 to-pink-950 rounded-3xl flex flex-col justify-start items-center">
+          <div className="h-full bg-gradient-to-t from-pink-800 via-pink-900 to-pink-950 rounded-3xl flex flex-col justify-start items-center mb-5">
             <div className="w-2/5 m-5 bg-stone-300 rounded-full p-5 flex justify-center items-center bg-opacity-10">
               <img src="../../../cpu.png" />
             </div>

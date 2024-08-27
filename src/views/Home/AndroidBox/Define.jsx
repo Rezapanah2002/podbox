@@ -17,7 +17,7 @@ function Define() {
         <div className="p-10 m-5 w-2/3 bg-gradient-to-l from-indigo-800 via-indigo-600 to-indigo-300 rounded-2xl flex flex-col items-start max-[1200px]:w-full max-[1200px]:items-center">
           <div className="text-right">
             <h1 className="text-2xl m-2">پادباکس چیست؟</h1>
-            <p className="text-xl font-thin max-[780px]:text-base">
+            <p className="text-xl text-balance font-thin max-[780px]:text-base">
               سخت‌افزار پادباکس می‌تواند هر تلویزیون معمولی را به یک تلویزیون
               هوشمند تبدیل کند. پادباکس مینی‌کامپیوتری است که کارکردن با آن
               بسیار آسان است و شما را به دنیای بی‌انتهای سرگرمی‌های اینترنتی

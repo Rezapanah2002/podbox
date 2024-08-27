@@ -89,7 +89,7 @@ function LuanchAnim() {
   ];
 
   return (
-    <div ref={section3Ref} className="w-full min-h-screen">
+    <div ref={section3Ref} className="w-full">
       <div className="w-full h-screen flex justify-center max-[1210px]:hidden">
         <motion.div className="flex justify-center w-2/3 h-4/5 rounded-3xl relative">
           <motion.img

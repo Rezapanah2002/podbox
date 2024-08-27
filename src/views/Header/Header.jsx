@@ -38,7 +38,7 @@ function Header() {
   return (
     <header className="border-b-2 border-stone-950 shadow-sm shadow-stone-950 sticky top-0 left-0 right-0 w-full z-50 bg-black">
       {/* navbar */}
-      <nav className="text-slate-300 flex items-center justify-evenly font-light text-lg w-full py-2">
+      <nav className="text-slate-300 flex items-center justify-around font-light text-lg w-full py-2">
         {/* button */}
         <button
           className="bg-gradient-to-r from-b-from via-b-via to-b-to rounded-xl py-2 px-5 hover:scale-110 hover:opacity-100 duration-500"

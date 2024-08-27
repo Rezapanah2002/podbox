@@ -4,8 +4,8 @@ function LaunchCards() {
   return (
     <div className="w-5/6 flex justify-center items-center">
       <div className="w-full min-h-screen flex flex-col justify-center items-center">
-        <div className=" w-2/3 h-4/5">
-          <div className="grid grid-cols-3 grid-rows-2 gap-10">
+        <div className=" w-2/3 h-4/5 max-[1250px]:w-full">
+          <div className="grid grid-cols-3 max-[1250px]:grid-cols-2 max-[820px]:grid-cols-1 grid-rows-2 gap-10">
             <div className="sec3-cards">
               <div className="sec3-icons">
                 <img src="../../../headphone.png" />
