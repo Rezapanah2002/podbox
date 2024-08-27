@@ -122,7 +122,7 @@ function Header() {
               onClick={toggleModal}
             >
               <motion.div
-                className="p-5 w-1/2 rounded-3xl bg-stone-900"
+                className="p-5 w-1/2 rounded-3xl bg-stone-900 max-[670px]:w-5/6"
                 initial={{ y: "-10%", opacity: 0 }}
                 animate={{ y: "0%", opacity: 1 }}
                 exit={{ y: "10%", opacity: 0 }}
@@ -134,10 +134,10 @@ function Header() {
                 </button>
                 <div className="flex flex-col justify-center items-center">
                   <div className="text-center">
-                    <h1 className="text-2xl m-2">
+                    <h1 className="text-2xl m-2 max-[900px]:text-sm">
                       از کجا سخت‌افزار پادباکس را بخرم؟
                     </h1>
-                    <p className="text-xl">
+                    <p className="text-xl max-[900px]:text-sm">
                       با انتخاب هر یک از فروشگاه‌ها، می‌توانید نسبت به خرید
                       دستگاه پادباکس اقدام نمایید
                     </p>
