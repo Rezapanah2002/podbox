@@ -51,17 +51,17 @@ function Footer() {
 
   return (
     <div>
-      <footer className=" font-light px-20 border-t-2 border-stone-950 text-gray-500">
-        <div className="flex items-center justify-evenly py-4">
-          <div className="flex justify-between">
+      <footer className=" font-light border-t-2 border-stone-950 text-gray-500">
+        <div className="flex items-center justify-evenly py-4 max-[780px]:justify-around">
+          <div className="flex items-center gap-2">
             <a
               href="https://trustseal.enamad.ir/?id=465948&Code=IzKDL9tqJXK36EOgCtzjSZVafApgWgUy"
               target="_blank"
             >
-              <img src="../../../namad.png" className="w-16 mx-6" />
+              <img src="../../../namad.png" className="w-16" />
             </a>
             <a href="https://sapra.ir/" target="_blank">
-              <img src="../../../sapra.png" className="w-1/3" />
+              <img src="../../../sapra.png" className="w-12" />
             </a>
           </div>
           <div className="flex items-center mx-5 gap-3">
@@ -72,11 +72,11 @@ function Footer() {
             ))}
 
             <ul
-              className={`m-6 gap-10 ${
+              className={`gap-10 ${
                 isMenuOpen || width > 853 ? "gap-8 flex justify-end" : "hidden"
               } ${
                 isMenuOpen
-                  ? "fixed flex-col items-center p-10 justify-between mx-0 bottom-10 left-0 w-full h-full bg-black overflow-y-scroll"
+                  ? "fixed flex-col items-center justify-between mx-0 bottom-10 left-0 w-full h-full bg-black overflow-y-scroll"
                   : "gap-4 flex justify-end"
               }`}
               id="fmenu"
@@ -127,7 +127,7 @@ function Footer() {
                 d="m19.5 8.25-7.5 7.5-7.5-7.5"
               />
             </svg>
-            <p className="text-sm">سایر لینک ها</p>
+            <p className="text-sm max-[620px]:text-xs">سایر لینک ها</p>
           </div>
         </div>
       </footer>

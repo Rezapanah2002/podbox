@@ -5,17 +5,19 @@ function Define() {
   return (
     <div>
       <div className="p-16 w-full min-h-screen flex flex-col items-center bg-gradient-radial from-indigo-950 to-black text-center">
-        <h1 className="text-2xl font-medium bg-gradient-to-l from-indigo-600 to-indigo-400 bg-clip-text inline-block text-transparent">
+        <h1 className="text-2xl font-medium bg-gradient-to-l from-indigo-600 to-indigo-400 bg-clip-text inline-block text-transparent max-[780px]:text-base">
           اندروید باکس پادباکس
         </h1>
-        <h2 className="m-10 text-5xl">اندروید باکسی که به آن احتیاج دارید</h2>
-        <p className="mb-5 text-2xl text-stone-500">
+        <h2 className="m-10 text-5xl max-[780px]:text-xl">
+          اندروید باکسی که به آن احتیاج دارید
+        </h2>
+        <p className="mb-5 text-2xl text-stone-500 max-[780px]:text-lg">
           مشخصات فنی و نحوه استفاده
         </p>
         <div className="p-10 m-5 w-2/3 bg-gradient-to-l from-indigo-800 via-indigo-600 to-indigo-300 rounded-2xl flex flex-col items-start max-[1200px]:w-full max-[1200px]:items-center">
           <div className="text-right">
             <h1 className="text-2xl m-2">پادباکس چیست؟</h1>
-            <p className="text-xl font-thin">
+            <p className="text-xl font-thin max-[780px]:text-base">
               سخت‌افزار پادباکس می‌تواند هر تلویزیون معمولی را به یک تلویزیون
               هوشمند تبدیل کند. پادباکس مینی‌کامپیوتری است که کارکردن با آن
               بسیار آسان است و شما را به دنیای بی‌انتهای سرگرمی‌های اینترنتی

@@ -3,9 +3,9 @@ import React from "react";
 function IntroCards() {
   return (
     <div>
-      <div className="flex justify-center items-center gap-5 mb-20 max-[1200px]:grid justify-items-center">
+      <div className="flex justify-center items-stretch gap-5 mb-20 max-[1200px]:grid justify-items-center">
         {/* plus */}
-        <div className="sec1-cards max-[1200px]:w-full">
+        <div className="sec1-cards max-[1620px]:w-1/4 max-[1200px]:w-5/6">
           <a href="/#sectionApp">
             <div className="flex flex-col justify-end mb-5 h-full">
               <div className="flex items-center justify-between mb-3">
@@ -40,7 +40,7 @@ function IntroCards() {
         </div>
 
         {/* luncher */}
-        <div className="sec1-cards max-[1200px]:w-full">
+        <div className="sec1-cards max-[1620px]:w-1/4 max-[1200px]:w-5/6">
           <a href="/#Luancher">
             <div className="flex flex-col justify-end mb-5 h-full">
               <div className="flex items-center justify-between mb-3">
@@ -76,7 +76,7 @@ function IntroCards() {
         </div>
 
         {/* android */}
-        <div className="sec1-cards max-[1200px]:w-full">
+        <div className="sec1-cards max-[1620px]:w-1/4 max-[1200px]:w-5/6">
           <a href="/#Androidbox">
             <div className="flex flex-col justify-end mb-5 h-full">
               <div className="flex items-center justify-between mb-3">

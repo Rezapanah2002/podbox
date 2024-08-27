@@ -68,9 +68,11 @@ function LaunchSlider() {
                   <div className="sec3-icons">
                     <img src={slide.icon} />
                   </div>
-                  <div className="w-2/3">
+                  <div className="w-2/3 max-[780px]:w-full flex flex-col justify-center items-end max-[1200px]:items-center">
                     <h1 className="text-2xl font-light mb-5">{slide.title}</h1>
-                    <p className="text-stone-400">{slide.description}</p>
+                    <p className="text-stone-400 max-[780px]:text-sm">
+                      {slide.description}
+                    </p>
                   </div>
                 </div>
               </motion.div>

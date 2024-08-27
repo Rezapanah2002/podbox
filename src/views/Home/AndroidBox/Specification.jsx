@@ -6,7 +6,9 @@ function Specification() {
       id="sectionTech"
       className="flex flex-col justify-center items-center w-2/3 m-32"
     >
-      <h1 className="text-2xl mb-10">مشخصات فنی سخت افزار پادباکس</h1>
+      <h1 className="text-2xl mb-10 max-[780px]:text-base">
+        مشخصات فنی سخت افزار پادباکس
+      </h1>
       <div>
         <div className="grid grid-cols-4 max-[1200px]:grid-cols-3 grid-rows-2 gap-5">
           <div className="h-full bg-gradient-to-t from-orange-800 via-orange-900 to-orange-950 rounded-3xl flex flex-col justify-start items-center">
