@@ -61,7 +61,7 @@ function Footer() {
               <img src="../../../namad.png" className="w-16" />
             </a>
             <a href="https://sapra.ir/" target="_blank">
-              <img src="../../../sapra.png" className="w-12" />
+              <img src="../../../sapra.png" className="w-10" />
             </a>
           </div>
           <div className="flex items-center mx-5 gap-3">
