@@ -8,7 +8,7 @@ import IntroCards from "./IntroCards";
 function Intro() {
   return (
     <div>
-      <div className="relative mt-[100px]">
+      <div>
         <IntroAnim />
         <IntroCards />
       </div>

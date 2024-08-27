@@ -43,7 +43,7 @@ body {
     @apply bg-c-bg border border-white rounded-3xl px-8 py-10 my-5;
   }
    .sec1-cards{
-    @apply cursor-pointer p-10 flex flex-col items-center justify-evenly w-1/5 h-1/2 text-right bg-gradient-to-r from-stone-900 to-stone-800 rounded-3xl opacity-90 hover:opacity-70
+    @apply cursor-pointer p-10 flex flex-col items-center justify-evenly w-1/5 h-full text-right bg-gradient-to-r from-stone-900 to-stone-800 rounded-3xl opacity-90 hover:opacity-70
    }
    .sec3-cards{
     @apply px-9 py-16 flex flex-col items-end justify-center text-right w-full h-full bg-white bg-opacity-10 rounded-3xl
@@ -66,19 +66,4 @@ body {
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-}
-
-.animation-fade-in {
-  animation: fadeIn 0.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-10%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }

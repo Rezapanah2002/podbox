@@ -2,10 +2,13 @@ import React from "react";
 
 function Specification() {
   return (
-    <div id="sectionTech" className="flex flex-col justify-center items-center">
+    <div
+      id="sectionTech"
+      className="flex flex-col justify-center items-center w-2/3 m-32"
+    >
       <h1 className="text-2xl mb-10">مشخصات فنی سخت افزار پادباکس</h1>
-      <div className="w-3/5">
-        <div className="grid grid-cols-4 grid-rows-2 gap-5">
+      <div>
+        <div className="grid grid-cols-4 max-[1200px]:grid-cols-3 grid-rows-2 gap-5">
           <div className="h-full bg-gradient-to-t from-orange-800 via-orange-900 to-orange-950 rounded-3xl flex flex-col justify-start items-center">
             <div className="w-2/5 m-5 bg-stone-300 rounded-full p-5 flex justify-center items-center bg-opacity-10">
               <img src="../../../4k.png" />

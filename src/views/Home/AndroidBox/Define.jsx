@@ -12,10 +12,10 @@ function Define() {
         <p className="mb-5 text-2xl text-stone-500">
           مشخصات فنی و نحوه استفاده
         </p>
-        <div className="p-10 m-5 w-3/5 bg-gradient-to-l from-indigo-800 via-indigo-600 to-indigo-300 rounded-2xl flex flex-col items-start">
+        <div className="p-10 m-5 w-2/3 bg-gradient-to-l from-indigo-800 via-indigo-600 to-indigo-300 rounded-2xl flex flex-col items-start max-[1200px]:w-full max-[1200px]:items-center">
           <div className="text-right">
             <h1 className="text-2xl m-2">پادباکس چیست؟</h1>
-            <p className="text-xl">
+            <p className="text-xl font-thin">
               سخت‌افزار پادباکس می‌تواند هر تلویزیون معمولی را به یک تلویزیون
               هوشمند تبدیل کند. پادباکس مینی‌کامپیوتری است که کارکردن با آن
               بسیار آسان است و شما را به دنیای بی‌انتهای سرگرمی‌های اینترنتی
@@ -26,15 +26,17 @@ function Define() {
               داشت
             </p>
           </div>
-          <button className="justify-start m-5 border-2 border-transparent bg-white rounded-2xl text-black px-7 py-3 hover:scale-105 duration-300 hover:shadow-2xl">
+          <button className="justify-start m-5 border-2 border-transparent bg-white rounded-2xl text-black px-7 py-3 hover:scale-105 duration-300 hover:shadow-2xl max-[1200px]:w-full">
             تماشای ویدئو
           </button>
         </div>
-        <div className="flex items-stretch w-3/5 gap-3">
+        <div className="flex items-stretch w-2/3 gap-3 max-[1200px]:w-full max-[800px]:grid">
           <div className="p-10 bg-white rounded-2xl bg-opacity-10">
             <div className="flex flex-col justify-center items-center text-right">
-              <h1 className="text-2xl mb-8">محتویات جعبه پادباکس</h1>
-              <p className="mb-10">
+              <h1 className="text-2xl mb-8 max-[1200px]:text-base">
+                محتویات جعبه پادباکس
+              </h1>
+              <p className="text-stone-400 mb-10 max-[1200px]:text-sm">
                 سخت‌افزار پادباکس، یک عدد ایرموس، یک عدد دانگل ایرموس، دو عدد
                 باتری نیم‌قلمی، یک عدد آداپتور، یک عدد کابل HDMI، دفترچه راهنما
               </p>
@@ -43,8 +45,10 @@ function Define() {
           </div>
           <div className="p-10 bg-white rounded-2xl bg-opacity-10">
             <div className="flex flex-col justify-center items-center text-right">
-              <h1 className="text-xl mb-8">ریموت کنترل ایرموس پادباکس</h1>
-              <p className="mb-10">
+              <h1 className="text-xl mb-8 max-[1200px]:text-base">
+                ریموت کنترل ایرموس پادباکس
+              </h1>
+              <p className="text-stone-400 mb-10 max-[1200px]:text-sm">
                 ایرموس پادباکس؛ وسیله‌ای برای ناوبری آسان در صفحه تلویزیون و
                 رفتن به منوهای مختلف
               </p>
@@ -52,9 +56,7 @@ function Define() {
             </div>
           </div>
         </div>
-        <div className="w-full flex flex-col justify-center items-center m-32">
-          <Specification />
-        </div>
+        <Specification />
       </div>
     </div>
   );

@@ -19,7 +19,7 @@ function LaunchSlider() {
       image: "../../../health.jpeg",
       title: "سلامت هوشمند",
       description:
-        "حالا وقتش شده که سلامت بدنتان را همیشه تحت‌نظر داشته باشید. با استفاده از سلامت هوشمند پادباکس و گجت‌های پوشیدنی، هیچ تپش قلبی از دست نمی‌رود!",
+        "حالا وقتش شده که سلامت بدنتان را همیشه تحت‌نظر داشته باشید. با استفاده از سلامت هوشمند پادباکس و گجت‌های پوشیدنی، هیچ تپش قلبی از دست نمی‌رود",
       icon: "../../../ihealth.png",
     },
     {
@@ -58,15 +58,20 @@ function LaunchSlider() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -100 }}
                 transition={{ duration: 1, ease: [0.5, 0, 0.5, 1] }}
-                className="absolute m-10 flex items-center justify-between w-3/5"
+                className="absolute m-10 flex items-center justify-between w-3/4"
               >
-                <img src={slide.image} className="w-1/3 rounded-3xl" />
-                <div className="text-right m-5 flex flex-col items-end justify-center">
+                <img
+                  src={slide.image}
+                  className="w-1/3 rounded-3xl max-[1200px]:hidden"
+                />
+                <div className="text-right m-5 flex flex-col items-end justify-center max-[1200px]:items-center">
                   <div className="sec3-icons">
                     <img src={slide.icon} />
                   </div>
-                  <h1 className="text-2xl font-light mb-5">{slide.title}</h1>
-                  <p className="text-stone-400">{slide.description}</p>
+                  <div className="w-2/3">
+                    <h1 className="text-2xl font-light mb-5">{slide.title}</h1>
+                    <p className="text-stone-400">{slide.description}</p>
+                  </div>
                 </div>
               </motion.div>
             )

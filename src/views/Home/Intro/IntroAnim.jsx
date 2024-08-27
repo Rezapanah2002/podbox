@@ -29,7 +29,7 @@ function IntroAnim() {
   const smoothY1 = useSpring(y1, { stiffness: 100, damping: 50 });
   return (
     <div ref={section1Ref}>
-      <div className="w-full h-[80vh] flex justify-center max-[1210px]:hidden">
+      <div className="w-full h-[80vh] flex justify-center max-[1200px]:hidden">
         <div className="flex justify-center w-3/5 h-3/4 bg-gradient-to-r from-b-from via-b-via to-b-to rounded-3xl relative">
           <img
             className="px-16 pt-20 w-full h-full absolute bottom-0 drag-none"

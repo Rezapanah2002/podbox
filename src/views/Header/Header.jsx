@@ -36,7 +36,7 @@ function Header() {
   }, [width, isMenuOpen]);
 
   return (
-    <header className="border-b-2 border-stone-950 shadow-sm shadow-stone-950 fixed top-0 left-0 w-full z-50 bg-black max-[1076px]:sticky">
+    <header className="border-b-2 border-stone-950 shadow-sm shadow-stone-950 sticky top-0 left-0 right-0 w-full z-50 bg-black">
       {/* navbar */}
       <nav className="text-slate-300 flex items-center flex-row justify-evenly font-light text-lg w-full px-12 py-2">
         {/* button */}
