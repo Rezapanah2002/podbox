@@ -64,14 +64,14 @@ function Workwith() {
             <p className="text-sm">لطفا فیلد های فرم را به دقت پر کنید</p>
           </div>
           <form action="/submit" method="post" className="flex flex-col my-10">
-            <label for="name">:نام و نام خانوادگی</label>
+            <label for="name">نام و نام خانوادگی</label>
             <input
               type="text"
               name="name"
               required
               className="rounded-lg p-4 text-right bg-stone-800 my-5 border border-stone-400"
             />
-            <label for="phone">:تلفن تماس</label>
+            <label for="phone">تلفن تماس</label>
             <input
               type="tel"
               id="phone"
@@ -79,7 +79,7 @@ function Workwith() {
               required
               className="rounded-lg p-4 text-right bg-stone-800 my-5 border border-stone-400"
             />
-            <label for="cooperation">:مدل همکاری</label>
+            <label for="cooperation">مدل همکاری</label>
             <select
               id="cooperation"
               name="cooperation"
@@ -89,7 +89,7 @@ function Workwith() {
               <option value="development">توسعه دهندگان اپلیکیشن و بازی</option>
               <option value="hardware">شرکت های سخت افزاری</option>
             </select>
-            <label for="message">:متن پیام</label>
+            <label for="message">متن پیام</label>
             <textarea
               id="message"
               name="message"
@@ -98,7 +98,7 @@ function Workwith() {
               className="rounded-lg p-4 text-right bg-stone-800 my-5 border border-stone-400"
             ></textarea>
             <div className="flex flex-col">
-              <label for="phone">:کد امنیتی</label>
+              <label for="phone">کد امنیتی</label>
               <div className="flex justify-end gap-24 items-center">
                 <img src="../../../headphone.png" className="" />
                 <input
