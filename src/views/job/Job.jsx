@@ -12,7 +12,7 @@ function Job() {
       </div>
       <div className="mt-32 flex flex-col justify-center items-end text-right w-2/5">
         <h1 className="text-2xl mb-5">فرصت‌های همکاری</h1>
-        <p className="text-base text-stone-400">
+        <p className="text-base text-stone-400 leading-loose">
           در پادباکس ما قرار نیست یک خانواده باشیم و از شما انتظار چیزی که برای
           خانواده‌تان خرج می‌کنید را داشته باشیم! در پادباکس ما یک تیم هستیم که
           یک هدف داریم و اون هم بهتر و بهتر کردن پادباکس و سرویس‌های مختلف اون
