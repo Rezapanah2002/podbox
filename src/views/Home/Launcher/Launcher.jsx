@@ -9,7 +9,7 @@ import LaunchMovies from "./LaunchMovies";
 function Launcher() {
   return (
     <div id="Luancher">
-      <div className="pt-16 w-full min-h-screen flex flex-col items-center bg-gradient-radial from-emerald-950 to-black text-center">
+      <div className="px-5 pt-16 w-full min-h-screen flex flex-col items-center bg-gradient-radial from-emerald-950 to-black text-center">
         <h1 className="text-2xl font-medium bg-gradient-to-l from-emerald-700 to-emerald-400 bg-clip-text inline-block text-transparent max-[780px]:text-lg">
           لانچر پادباکس
         </h1>

@@ -53,7 +53,7 @@ function Header() {
               : "hidden"
           } ${
             isMenuOpen
-              ? "fixed flex-col items-end py-20 pr-20 top-9 mx-0 left-0 w-full h-full bg-black overflow-y-scroll"
+              ? "fixed flex-col items-end py-20 pr-20 top-10 mx-0 left-0 w-full h-full bg-black overflow-y-scroll"
               : "flex justify-evenly gap-12"
           }`}
           id="menu"

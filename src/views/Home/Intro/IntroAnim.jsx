@@ -27,6 +27,35 @@ function IntroAnim() {
 
   const y1 = useTransform(scrollY, section1Range, [150, -120]);
   const smoothY1 = useSpring(y1, { stiffness: 100, damping: 50 });
+
+  const items = [
+    {
+      ClassName: "anim-items w-1/3 h-24 -top-28 -left-28",
+      src: "../../../play-button.png",
+      style: { y: smoothY1 },
+    },
+    {
+      ClassName: "anim-items w-64 h-80 -top-44 -right-28",
+      src: "../../../soul.jpeg",
+      style: { y: smoothY1 },
+    },
+    {
+      ClassName: "anim-items w-56 h-72 bottom-16 -left-20",
+      src: "../../../dune.jpeg",
+      style: { y: smoothY1 },
+    },
+    {
+      ClassName: "anim-items w-40 h-40 bottom-52 right-1/2",
+      src: "../../../music.png",
+      style: { y: smoothY1 },
+    },
+    {
+      ClassName: "anim-items w-20 h-20 bottom-28 -right-10",
+      src: "../../../gaming.png",
+      style: { y: smoothY1 },
+    },
+  ];
+
   return (
     <div ref={section1Ref}>
       <div className="w-full h-[80vh] flex justify-center max-[1400px]:hidden">

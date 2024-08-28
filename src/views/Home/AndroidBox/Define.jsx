@@ -4,7 +4,7 @@ import Specification from "./Specification";
 function Define() {
   return (
     <div>
-      <div className="p-16 w-full min-h-screen flex flex-col items-center bg-gradient-radial from-indigo-950 to-black text-center">
+      <div className="p-5 w-full min-h-screen flex flex-col items-center bg-gradient-radial from-indigo-950 to-black text-center">
         <h1 className="text-2xl font-medium bg-gradient-to-l from-indigo-600 to-indigo-400 bg-clip-text inline-block text-transparent max-[780px]:text-base">
           اندروید باکس پادباکس
         </h1>
