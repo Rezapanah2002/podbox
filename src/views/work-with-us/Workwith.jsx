@@ -25,17 +25,19 @@ function Workwith() {
 
   return (
     <div>
-      <div className="w-full flex flex-col justify-center items-center">
-        <h1 className="text-5xl font-light mt-20">همکاری با پادباکس</h1>
-        <h1 className="text-xl font-thin m-10">
+      <div className="w-full flex flex-col justify-center items-center text-center">
+        <h1 className="text-5xl font-light mt-20 max-sm:text-3xl">
+          همکاری با پادباکس
+        </h1>
+        <h1 className="text-xl font-thin m-10 max-sm:text-base">
           :اگر مایل به همکاری با پادباکس هستید، در این فهرست، مدل همکاری مورد
           نظرتان را انتخاب کنید
         </h1>
-        <div className="w-2/5 flex gap-5 m-10 text-center">
+        <div className="w-2/5 flex gap-5 m-10 text-center justify-center items-center max-md:flex-col max-md:w-full">
           {tabContent.map((tab, index) => (
             <div
               key={index}
-              className={`flex flex-col justify-center items-center cursor-pointer aspect-square w-1/3 h-auto bg-white bg-opacity-5 rounded-3xl hover:bg-opacity-20 duration-300 ${
+              className={`flex flex-col justify-center items-center cursor-pointer aspect-square w-1/3 h-auto bg-white bg-opacity-5 rounded-3xl hover:bg-opacity-20 duration-300  max-md:w-full max-md:aspect-auto p-10 ${
                 activeTab === index ? "bg-opacity-20" : ""
               }`}
               onClick={() => setActiveTab(index)}
@@ -52,13 +54,13 @@ function Workwith() {
             </div>
           ))}
         </div>
-        <div className="m-10 text-right w-2/5">
+        <div className="m-10 text-right w-2/5 p-3 max-md:w-full">
           <h1 className="text-3xl">{tabContent[activeTab].title}</h1>
           <p className="text-xl mt-4 text-stone-500 font-light">
             {tabContent[activeTab].content}
           </p>
         </div>
-        <div className="w-2/5 m-10 text-right">
+        <div className="w-2/5 m-10 text-right max-md:w-full p-5">
           <div className="font-light">
             <h1 className="text-2xl mb-5">فرم مدل های همکاری</h1>
             <p className="text-sm">لطفا فیلد های فرم را به دقت پر کنید</p>
@@ -100,7 +102,9 @@ function Workwith() {
             <div className="flex flex-col">
               <label for="phone">کد امنیتی</label>
               <div className="flex justify-end gap-24 items-center">
-                <img src="../../../headphone.png" className="" />
+                <div className="flex justify-center items-center w-44 h-14 rounded-lg bg-slate-500 border-2 border-dashed border-slate-400">
+                  <p className="text-slate-300">CAPCHA</p>
+                </div>
                 <input
                   type="tel"
                   id="phone"
@@ -112,7 +116,7 @@ function Workwith() {
             </div>
             <button
               type="submit"
-              className="w-1/4 bg-white rounded-lg p-4 text-black font-light my-5 hover:scale-105 duration-300"
+              className="max-md:w-full w-1/4 bg-white rounded-lg p-4 text-black font-light my-5 hover:scale-105 duration-300"
             >
               ارسال
             </button>

@@ -5,7 +5,7 @@ import Buy from "./Buy";
 function PodboxPlus() {
   return (
     <div id="sectionApp">
-      <div className="py-10 px-10 w-full flex min-h-screen flex-col items-center bg-gradient-to-b from-amber-950 to-black text-center">
+      <div className="pt-32 px-10 w-full flex min-h-screen flex-col items-center bg-gradient-to-b from-amber-950 to-black text-center">
         <h1 className="text-xl font-medium bg-gradient-to-l from-b-via to-b-to bg-clip-text inline-block text-transparent max-[780px]:w-full max-[780px]:text-base">
           معرفی پادباکس پلاس
         </h1>

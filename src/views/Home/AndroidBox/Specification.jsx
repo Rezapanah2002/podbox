@@ -79,7 +79,7 @@ function Specification() {
   return (
     <div
       id="sectionTech"
-      className="pb-20 px-5 flex flex-col justify-center items-center w-2/3 m-32 max-[780px]:w-full"
+      className="pt-40 pb-20 px-5 flex flex-col justify-center items-center m-32 w-2/3 max-[780px]:w-full"
     >
       <h1 className="text-2xl mb-10 max-[780px]:text-lg">
         مشخصات فنی سخت افزار پادباکس

@@ -99,7 +99,9 @@ function Job() {
           <div className="flex flex-col">
             <label for="phone">:کد امنیتی</label>
             <div className="flex justify-end gap-24 items-center">
-              <img src="../../../headphone.png" className="" />
+              <div className="flex justify-center items-center w-44 h-14 rounded-lg bg-slate-500 border-2 border-dashed border-slate-400">
+                <p className="text-slate-300">CAPCHA</p>
+              </div>
               <input
                 type="tel"
                 id="phone"
