@@ -4,12 +4,12 @@ function Terms() {
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="flex flex-col justify-center items-center text-right">
-        <div className="my-32 flex flex-col justify-center items-end text-right w-3/5">
-          <h2 className="text-lg my-2">
+        <div className="my-32 flex flex-col justify-center items-end text-right w-3/5 max-md:w-full p-4 text-lg max-md:text-base">
+          <h2 className="my-2">
             از اینکه پادباکس را به‌عنوان همراه هوشمند خانواده خود انتخاب
             کرده‌اید، بسیار سپاسگزاریم
           </h2>
-          <p className="text-lg font-light text-stone-500 leading-loose">
+          <p className="font-light text-stone-500 leading-loose">
             پادباکس پلتفرمی است که سرگرمی و هوشمندی را به خانه شما می‌آورد و سعی
             می‌کند زندگی خانواده‌های ایرانی را تسهیل و دیجیتالی کند.
             <br /> به کاربران این اطمینان را می‌دهیم که محتوای موجود در پادباکس
@@ -20,10 +20,10 @@ function Terms() {
             امنیت اطلاعات مطابق با تعاریف و سیاست‌هایی که از طریق بانک پاسارگاد
             تدوین و تهیه شده است بر کل این زیست‌بوم حاکم است
           </p>
-          <h2 className="text-lg my-2">
+          <h2 className="my-2">
             :اطلاعات دریافت شده از کاربران و نحوه استفاده از آنها
           </h2>
-          <p className="text-lg font-light text-stone-500 leading-loose">
+          <p className=" font-light text-stone-500 leading-loose">
             برای استفاده از پادباکس شما باید در سرزمین هوشمند پاد عضو شوید. با
             ورود و ثبت‌نام در پادباکس، دنیای جدیدی از خدمات دیجیتالی در حوزه‌های
             مختلف سرزمین هوشمند پاد در اختیار شما قرار خواهد گرفت.
@@ -48,14 +48,14 @@ function Terms() {
             سرزمین هوشمند پاد نگهداری می‌شود و تنها توسط همان کاربر و در همان
             دستگاهی که با آن ثبت‌نام کرده است قابل‌مشاهده است
           </p>
-          <h2 className="text-lg my-2">حق نشر و مالکیت معنوی در پادباکس</h2>
-          <p className="text-lg font-light text-stone-500 leading-loose">
+          <h2 className="my-2">حق نشر و مالکیت معنوی در پادباکس</h2>
+          <p className="font-light text-stone-500 leading-loose">
             پادباکس با همکاری صاحبان محتوا و خدمات، مجوزهای لازم برای استفاده از
             محصولاتشان را به دست آورده و آنها را در اختیار کاربرانش قرار می‌دهد.
             این محتوا و خدمات تأییدهای لازم را از مراجع ذی‌صلاح دریافت کرده‌اند
           </p>
-          <h2 className="text-lg my-2">قوانین و مقررات حکومتی</h2>
-          <p className="text-lg font-light text-stone-500 leading-loose">
+          <h2 className="my-2">قوانین و مقررات حکومتی</h2>
+          <p className="font-light text-stone-500 leading-loose">
             در صورت استفاده نادرست از خدمات پادباکس که با قوانین کشور مغایرت
             داشته باشد، پادباکس مجاز است که حساب کاربری شما را مسدود کند
           </p>

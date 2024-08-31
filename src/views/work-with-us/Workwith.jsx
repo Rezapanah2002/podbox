@@ -101,8 +101,8 @@ function Workwith() {
             ></textarea>
             <div className="flex flex-col">
               <label for="phone">کد امنیتی</label>
-              <div className="flex justify-end gap-24 items-center">
-                <div className="flex justify-center items-center w-44 h-14 rounded-lg bg-slate-500 border-2 border-dashed border-slate-400">
+              <div className="flex justify-end gap-3 items-center">
+                <div className="flex justify-center items-center w-1/3 rounded-lg bg-slate-500 border-2 border-dashed border-slate-400">
                   <p className="text-slate-300">CAPCHA</p>
                 </div>
                 <input

@@ -49,11 +49,11 @@ function Header() {
         <ul
           className={` ${
             isMenuOpen || width > 1076
-              ? "m-3 flex justify-evenly gap-12 py-3"
+              ? "m-3 flex justify-evenly gap-5 py-3 overflow-y-scroll"
               : "hidden"
           } ${
             isMenuOpen
-              ? "fixed flex-col items-end py-20 pr-20 top-10 mx-0 left-0 w-full h-full bg-black overflow-y-scroll"
+              ? "fixed flex-col justify-center items-end py-20 pr-20 top-10 mx-0 left-0 w-full h-full bg-black"
               : "flex justify-evenly gap-12"
           }`}
           id="menu"

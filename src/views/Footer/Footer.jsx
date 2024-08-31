@@ -76,7 +76,7 @@ function Footer() {
                 isMenuOpen || width > 853 ? "gap-8 flex justify-end" : "hidden"
               } ${
                 isMenuOpen
-                  ? "fixed flex-col items-center justify-between mx-0 bottom-20 left-0 w-full h-full bg-black overflow-y-scroll"
+                  ? "fixed flex-col items-center justify-center mx-0 bottom-20 left-0 w-full h-full bg-black overflow-y-scroll"
                   : "gap-4 flex justify-end"
               }`}
               id="fmenu"
