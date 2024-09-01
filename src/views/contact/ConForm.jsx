@@ -6,8 +6,11 @@ function ConForm() {
       <div className="font-light">
         <h1 className="text-2xl mb-5">تماس با پادباکس</h1>
         <p className="text-sm">
-          لطفاً پیش از ارسال ایمیل یا تماس تلفنی، ابتدا پرسش‌‌های متداول را
-          مشاهده کنید
+          لطفاً پیش از ارسال ایمیل یا تماس تلفنی، ابتدا{" "}
+          <a href="/faq">
+            <b className="text-blue-800">پرسش‌‌های متداول</b>
+          </a>
+          را مشاهده کنید
         </p>
       </div>
       <form action="/submit" method="post" className="flex flex-col my-10">
