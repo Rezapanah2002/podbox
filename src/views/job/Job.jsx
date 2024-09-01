@@ -56,6 +56,7 @@ function Job() {
             type="text"
             name="name"
             required
+            placeholder="نام و نام خانوادگی خود را وارد کنید"
             className="rounded-lg p-4 text-right bg-stone-800 my-5 border border-stone-400"
           />
           <label for="phone">تلفن تماس</label>
@@ -64,17 +65,19 @@ function Job() {
             id="phone"
             name="phone"
             required
+            placeholder="شماره تماس خود را وارد کنید"
             className="rounded-lg p-4 text-right bg-stone-800 my-5 border border-stone-400"
           />
-          <label for="phone">ایمیل</label>
+          <label for="email">ایمیل</label>
           <input
-            type="tel"
-            id="phone"
-            name="phone"
+            type="email"
+            id="email"
+            name="email"
             required
+            placeholder="ایمیل خود را وارد کنید"
             className="rounded-lg p-4 text-right bg-stone-800 my-5 border border-stone-400 max-md:flex-col"
           />
-          <label for="phone">سوابق شغلی</label>
+          <label for="job">سوابق شغلی</label>
           <div className="w-full flex justify-center items-center gap-10">
             <button
               type="submit"
@@ -83,10 +86,11 @@ function Job() {
               PDF انتخاب فایل
             </button>
             <input
-              type="tel"
-              id="phone"
-              name="phone"
+              type="text"
+              id="job"
+              name="job"
               required
+              placeholder="لطفا سوابق شغلی خود را وارد کنید"
               className="w-3/4 rounded-lg p-4 text-right bg-stone-800 my-5 border border-stone-400"
             />
           </div>
@@ -96,19 +100,22 @@ function Job() {
             name="message"
             rows="4"
             cols="50"
+            placeholder="اگر نیاز به ارسال توضیحات تکمیلی دارید برای ما یادداشت بگذارید"
             className="rounded-lg p-4 text-right bg-stone-800 my-5 border border-stone-400"
           ></textarea>
           <div className="flex flex-col">
-            <label for="phone">کد امنیتی</label>
+            <label for="capcha">کد امنیتی</label>
             <div className="flex justify-end gap-3 items-center">
-              <div className="flex justify-center items-center w-1/3 rounded-lg bg-slate-500 border-2 border-dashed border-slate-400">
-                <p className="text-slate-300">CAPCHA</p>
+              <img src="refresh.png" className="mr-2 cursor-pointer" />
+              <div className="flex justify-center items-center h-14 w-1/3 rounded-lg bg-slate-500 border-2 border-dashed border-slate-400">
+                <p className="text-slate-300">CAPTCHA</p>
               </div>
               <input
-                type="tel"
-                id="phone"
-                name="phone"
+                type="number"
+                id="captcha"
+                name="captcha"
                 required
+                placeholder="لطفا کد امنیتی را وارد کنید"
                 className="rounded-lg p-4 text-right bg-stone-800 my-5 border border-stone-400"
               />
             </div>

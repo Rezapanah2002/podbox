@@ -71,6 +71,7 @@ function Workwith() {
               type="text"
               name="name"
               required
+              placeholder="نام و نام خانوادگی خود را وارد کنید"
               className="rounded-lg p-4 text-right bg-stone-800 my-5 border border-stone-400"
             />
             <label for="phone">تلفن تماس</label>
@@ -79,6 +80,7 @@ function Workwith() {
               id="phone"
               name="phone"
               required
+              placeholder="شماره تماس خود را وارد کنید"
               className="rounded-lg p-4 text-right bg-stone-800 my-5 border border-stone-400"
             />
             <label for="cooperation">مدل همکاری</label>
@@ -87,12 +89,16 @@ function Workwith() {
               name="cooperation"
               className="text-white rounded-lg p-4 text-right bg-stone-800 my-5 border border-stone-400"
             >
+              <option disabled selected hidden>
+                لطفا موضوع را انتخاب کنید
+              </option>
               <option value="content">تولید کننده محتوا</option>
               <option value="development">توسعه دهندگان اپلیکیشن و بازی</option>
               <option value="hardware">شرکت های سخت افزاری</option>
             </select>
             <label for="message">متن پیام</label>
             <textarea
+              placeholder="متن پیام خود را وارد کنید"
               id="message"
               name="message"
               rows="4"
@@ -100,15 +106,17 @@ function Workwith() {
               className="rounded-lg p-4 text-right bg-stone-800 my-5 border border-stone-400"
             ></textarea>
             <div className="flex flex-col">
-              <label for="phone">کد امنیتی</label>
+              <label for="captcha">کد امنیتی</label>
               <div className="flex justify-end gap-3 items-center">
-                <div className="flex justify-center items-center w-1/3 rounded-lg bg-slate-500 border-2 border-dashed border-slate-400">
-                  <p className="text-slate-300">CAPCHA</p>
+                <img src="refresh.png" className="mr-2 cursor-pointer" />
+                <div className="flex justify-center items-center h-14 w-1/3 rounded-lg bg-slate-500 border-2 border-dashed border-slate-400">
+                  <p className="text-slate-300">CATPCHA</p>
                 </div>
                 <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
+                  placeholder="لطفا کد امنیتی را وارد کنید"
+                  type="number"
+                  id="captcha"
+                  name="captcha"
                   required
                   className="rounded-lg p-4 text-right bg-stone-800 my-5 border border-stone-400"
                 />
