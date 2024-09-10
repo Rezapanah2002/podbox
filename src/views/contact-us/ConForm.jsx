@@ -8,7 +8,7 @@ function ConForm() {
         <p className="text-sm">
           لطفاً پیش از ارسال ایمیل یا تماس تلفنی، ابتدا{" "}
           <a href="/faq">
-            <b className="text-blue-800">پرسش‌‌های متداول</b>
+            <b className="text-blue-800">پرسش‌‌های متداول </b>
           </a>
           را مشاهده کنید
         </p>

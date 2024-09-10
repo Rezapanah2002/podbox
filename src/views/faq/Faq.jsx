@@ -83,15 +83,17 @@ function Faq() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center text-center leading-loose">
       <div className="flex flex-col justify-center items-center">
-        <div className="grid justify-items-center p-28 gap-7">
-          <h1 className="text-5xl">
+        <div className="grid justify-items-center p-10 gap-7 max-md:w-full">
+          <h1 className="max-md:text-xl text-5xl">
             برای راهنمایی و پاسخ به سوالات شما آماده ایم
           </h1>
-          <h3 className="text-xl">شاید برای شما هم سوال شده باشد!</h3>
+          <h3 className="max-md:text-base text-xl">
+            !شاید برای شما هم سوال شده باشد
+          </h3>
         </div>
-        <div className="flex justify-center gap-16 m-10 cursor-pointer">
+        <div className="flex justify-center gap-16 m-10 cursor-pointer max-md:w-full max-md:flex-col">
           <div
             onClick={() => handleInputChange(e)}
             className="grid justify-items-center opacity-40 hover:opacity-70"

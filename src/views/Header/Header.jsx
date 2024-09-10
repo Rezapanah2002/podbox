@@ -6,20 +6,13 @@ import { useState, useEffect } from "react";
 import { usePropWindow } from "../../hooks/usePropWindow";
 import { motion, AnimatePresence } from "framer-motion";
 
-function Header() {
+function Header({ menu }) {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { width } = usePropWindow();
 
-  const links = [
-    { href: "/blog", text: "وبلاگ" },
-    { href: "/contact", text: "تماس با ما" },
-    { href: "/about-us", text: "درباره ما" },
-    { href: "/faq", text: "سوالات متداول" },
-    { href: "/#sectionTech", text: "مشخصات فنی" },
-    { href: "/", text: "پادباکس" },
-  ];
+  console.log("header", menu);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -46,8 +39,10 @@ function Header() {
         >
           خرید پادباکس
         </button>
+
+        {/* useAPI */}
         <ul
-          className={` ${
+          className={`${
             isMenuOpen || width > 1076
               ? "m-3 flex justify-evenly gap-10 py-3"
               : "hidden"
@@ -58,20 +53,40 @@ function Header() {
           }`}
           id="menu"
         >
-          {links.map((link, index) => (
-            <li className="nav-bar" key={index}>
-              <Link
-                className={`link ${
-                  pathname === link.href ? "text-slate-50 font-semibold" : ""
-                }`}
-                href={link.href}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {link.text}
-              </Link>
-            </li>
-          ))}
+          {menu
+            ?.slice()
+            ?.reverse()
+            .map((link, index) =>
+              index === menu.length - 1 ? ( // Adjusted condition to match the first item after reversal
+                <li className="nav-bar special-item" key={index}>
+                  <Link
+                    className={`link special-link ${
+                      pathname === "/" ? "text-slate-50 font-semibold" : ""
+                    }`}
+                    href="/"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    پادباکس
+                  </Link>
+                </li>
+              ) : (
+                <li className="nav-bar" key={index}>
+                  <Link
+                    className={`link ${
+                      pathname === link.metadata.link
+                        ? "text-slate-50 font-semibold"
+                        : ""
+                    }`}
+                    href={link.metadata.link}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              )
+            )}
         </ul>
+
         <div
           onClick={toggleMenu}
           id="burger"

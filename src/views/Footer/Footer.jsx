@@ -5,10 +5,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { usePropWindow } from "../../hooks/usePropWindow";
 
-function Footer() {
+function Footer({ menu }) {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { width } = usePropWindow();
+
+  console.log("footer", menu);
 
   const links = [
     { href: "/terms-and-conditions", text: "قوانین و مقررات" },

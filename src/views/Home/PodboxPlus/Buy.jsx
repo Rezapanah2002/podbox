@@ -2,7 +2,7 @@ import React from "react";
 
 function Buy() {
   return (
-    <div className="mt-10 w-full flex flex-col justify-center items-center">
+    <div className="mt-10 w-full flex flex-col justify-center items-center mb-20">
       <div className="px-20 py-14 w-2/3 bg-white bg-opacity-10 rounded-3xl flex justify-between items-center max-[1200px]:w-full max-[800px]:bg-opacity-0 max-[800px]:flex-col">
         <div className="flex justify-between items-center gap-5 max-[800px]:mb-10">
           <div className="w-24 h-24 bg-white bg-opacity-10 rounded-2xl cursor-pointer hover:bg-opacity-5">
