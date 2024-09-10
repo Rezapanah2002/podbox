@@ -10,8 +10,6 @@ function Footer({ menu }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { width } = usePropWindow();
 
-  console.log("footer", menu);
-
   const socials = [
     {
       src: "../../../insta.png",

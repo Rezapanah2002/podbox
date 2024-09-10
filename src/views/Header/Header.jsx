@@ -12,8 +12,6 @@ function Header({ menu }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { width } = usePropWindow();
 
-  console.log("header", menu);
-
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
