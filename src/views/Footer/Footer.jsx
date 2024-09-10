@@ -12,14 +12,6 @@ function Footer({ menu }) {
 
   console.log("footer", menu);
 
-  // const links = [
-  //   { href: "/terms-and-conditions", text: "قوانین و مقررات" },
-  //   { href: "/job", text: "فرصت های شغلی" },
-  //   { href: "/work-with-us", text: "همکاری با پادباکس" },
-  //   { href: "/#sectionApp", text: "اپلیکیشن ها" },
-  //   { href: "https://app.podbox.ir/", text: "مشاهده نسخه وب", external: true },
-  // ];
-
   const socials = [
     {
       src: "../../../insta.png",
