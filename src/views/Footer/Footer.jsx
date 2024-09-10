@@ -64,34 +64,39 @@ function Footer({ menu }) {
             ))}
 
             <ul
-              className={` ${
-                isMenuOpen || width > 1076
-                  ? "m-3 flex justify-evenly gap-10 py-3"
-                  : "hidden"
+              className={`gap-10 ${
+                isMenuOpen || width > 853 ? "gap-8 flex justify-end" : "hidden"
               } ${
                 isMenuOpen
-                  ? "fixed flex-col justify-center items-end gap-2 py-20 pr-20 top-10 mx-0 left-0 w-full h-full bg-black overflow-y-scroll"
-                  : "flex justify-evenly gap-12"
+                  ? "fixed flex-col items-center justify-center mx-0 bottom-20 left-0 w-full h-full bg-black overflow-y-scroll"
+                  : "gap-4 flex justify-end"
               }`}
-              id="menu"
+              id="fmenu"
             >
               {menu
                 ?.slice()
                 ?.reverse()
                 .map((link, index) => (
-                  <li className="nav-bar" key={index}>
-                    <Link
-                      className={`link ${
-                        pathname === link.metadata.link
-                          ? "text-slate-50 font-semibold"
-                          : ""
-                      }`}
-                      href={link.metadata.link}
-                      onClick={() => setIsMenuOpen(false)}
-                      target={link.metadata.target}
-                    >
-                      {link.name}
-                    </Link>
+                  <li className="footer-bar" key={index}>
+                    {link.external ? (
+                      <a
+                        href={link.metadata.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {link.name}
+                      </a>
+                    ) : (
+                      <Link
+                        className={`link ${
+                          pathname === link.metadata.link ? "text-gray-50" : ""
+                        }`}
+                        href={link.metadata.link}
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {link.name}
+                      </Link>
+                    )}
                   </li>
                 ))}
             </ul>

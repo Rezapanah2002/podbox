@@ -10,6 +10,7 @@ export default async function RootLayout({ children }) {
   const menu = await fetchMenu();
   const header = menu.result?.[1]?.children ?? [];
   const footer = menu.result?.[2]?.children ?? [];
+
   return (
     <html lang="fa">
       <body className={inter.className}>
