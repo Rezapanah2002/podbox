@@ -57,7 +57,7 @@ function Header({ menu }) {
             ?.slice()
             ?.reverse()
             .map((link, index) =>
-              index === menu.length - 1 ? ( // Adjusted condition to match the first item after reversal
+              index === menu.length - 1 ? (
                 <li className="nav-bar special-item" key={index}>
                   <Link
                     className={`link special-link ${
@@ -79,6 +79,7 @@ function Header({ menu }) {
                     }`}
                     href={link.metadata.link}
                     onClick={() => setIsMenuOpen(false)}
+                    target={link.metadata.target}
                   >
                     {link.name}
                   </Link>

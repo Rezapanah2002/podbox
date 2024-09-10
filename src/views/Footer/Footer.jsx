@@ -12,13 +12,13 @@ function Footer({ menu }) {
 
   console.log("footer", menu);
 
-  const links = [
-    { href: "/terms-and-conditions", text: "قوانین و مقررات" },
-    { href: "/job", text: "فرصت های شغلی" },
-    { href: "/work-with-us", text: "همکاری با پادباکس" },
-    { href: "/#sectionApp", text: "اپلیکیشن ها" },
-    { href: "https://app.podbox.ir/", text: "مشاهده نسخه وب", external: true },
-  ];
+  // const links = [
+  //   { href: "/terms-and-conditions", text: "قوانین و مقررات" },
+  //   { href: "/job", text: "فرصت های شغلی" },
+  //   { href: "/work-with-us", text: "همکاری با پادباکس" },
+  //   { href: "/#sectionApp", text: "اپلیکیشن ها" },
+  //   { href: "https://app.podbox.ir/", text: "مشاهده نسخه وب", external: true },
+  // ];
 
   const socials = [
     {
@@ -74,38 +74,36 @@ function Footer({ menu }) {
             ))}
 
             <ul
-              className={`gap-10 ${
-                isMenuOpen || width > 853 ? "gap-8 flex justify-end" : "hidden"
+              className={` ${
+                isMenuOpen || width > 1076
+                  ? "m-3 flex justify-evenly gap-10 py-3"
+                  : "hidden"
               } ${
                 isMenuOpen
-                  ? "fixed flex-col items-center justify-center mx-0 bottom-20 left-0 w-full h-full bg-black overflow-y-scroll"
-                  : "gap-4 flex justify-end"
+                  ? "fixed flex-col justify-center items-end gap-2 py-20 pr-20 top-10 mx-0 left-0 w-full h-full bg-black overflow-y-scroll"
+                  : "flex justify-evenly gap-12"
               }`}
-              id="fmenu"
+              id="menu"
             >
-              {links.map((link, index) => (
-                <li className="footer-bar" key={index}>
-                  {link.external ? (
-                    <a
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {link.text}
-                    </a>
-                  ) : (
+              {menu
+                ?.slice()
+                ?.reverse()
+                .map((link, index) => (
+                  <li className="nav-bar" key={index}>
                     <Link
                       className={`link ${
-                        pathname === link.href ? "text-gray-50" : ""
+                        pathname === link.metadata.link
+                          ? "text-slate-50 font-semibold"
+                          : ""
                       }`}
-                      href={link.href}
+                      href={link.metadata.link}
                       onClick={() => setIsMenuOpen(false)}
+                      target={link.metadata.target}
                     >
-                      {link.text}
+                      {link.name}
                     </Link>
-                  )}
-                </li>
-              ))}
+                  </li>
+                ))}
             </ul>
           </div>
           <div
