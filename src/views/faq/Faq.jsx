@@ -125,18 +125,18 @@ function Faq() {
         </div>
         {/* acardeon */}
         <div className="flex flex-col w-screen justify-center items-center mt-20">
-          <div className="flex flex-col text-right justify-center items-center w-1/2">
+          <div className="flex flex-col text-right justify-center items-center w-1/2 max-md:w-full max-md:px-10">
             {faqData.map((item, index) => (
               <div
                 key={index}
                 className="w-full p-8 mb-4 cursor-pointer rounded-xl bg-white bg-opacity-10"
                 onClick={() => handleQuestionClick(index)}
               >
-                <div className="flex justify-end items-center mx-10">
-                  <h3 className="w-full text-lg font-semibold">
+                <div className="flex justify-end items-center max-md:w-full">
+                  <h3 className="w-full font-semibold max-md:text-xs">
                     {item.question}
                   </h3>
-                  <div className="ml-5 w-3 h-3 bg-red-600 rounded-full"></div>
+                  <div className="ml-5 w-3 aspect-square bg-red-600 rounded-full max-md:w-1"></div>
                 </div>
                 <AnimatePresence>
                   {openQuestion === index && (
@@ -144,9 +144,9 @@ function Faq() {
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
-                      className="text-stone-300 font-light px-8 my-5"
+                      className="text-stone-300 font-ligh px-8 my-5"
                     >
-                      <p>{item.answer}</p>
+                      <p className="max-md:text-sm">{item.answer}</p>
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -155,9 +155,7 @@ function Faq() {
           </div>
         </div>
       </div>
-      <div className="w-3/4">
-        <FaqForm />
-      </div>
+      <FaqForm />
     </div>
   );
 }
